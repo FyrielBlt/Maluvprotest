@@ -33,7 +33,9 @@
 </head>
 <style>
   
-
+#mur, #vitrine {
+  scroll-margin-top: 100px;
+}
 
     body {
       margin: 0;
@@ -167,7 +169,7 @@
 }
 
  .hero {
-  background-image: url('assets/img/pvccaroussel.jpg'); /* Remplace par le bon chemin */
+  background-image: url('assets/img/brick-facade-in-loft-style-3-vector-17871071.jpg'); /* Remplace par le bon chemin */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,13 +287,13 @@
           <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
         </a>
 
-      <nav id="navmenu" class="navmenu">
+         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html" >Accueil</a></li>
-            <li><a href="index.html#depannage">Depannage et réparation</a></li>
+            <li><a href="index.html#depannage" class="active">Depannage et réparation</a></li>
             <li><a href="index.html#about">A propos</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li class="dropdown" ><a href="#" class="active"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown" ><a href="#" ><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
@@ -359,7 +361,6 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
 <a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
 
       </div>
@@ -367,447 +368,147 @@
     </div>
 
   </header>
+
   <main class="main">
   <!-- Section Title -->
+
+
+
+ 
+
+
   <!-- Hero Section -->
-  <section class="hero-text-typing hero">
-  <div class="text-container" data-aos="fade-up">
-    <h2 id="typed-text">Porte d'entrée PVC</h2>
-    <p id="typed-subtext">Nous disposons d’un large choix de haute qualité.</p>
-  </div>
-</section>
-<script>
-function typeWriter(elementId, text, delay = 100, callback) {
-  const element = document.getElementById(elementId);
-  element.textContent = '';
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, delay);
-    } else {
-      if (callback) callback();
-    }
-  }
-  type();
-}
-
-// Lancer l’animation sur les deux textes
-window.onload = () => {
-  typeWriter('typed-text', 'Porte PVC', 120, () => {
-    // Quand le titre est fini, on tape la phrase en dessous
-    typeWriter('typed-subtext', 'Nous disposons d’un large choix de haute qualité.', 50);
-  });
-};
-</script>
+  
   <!-- Content Section -->
   <section class="content-section">
-    <h2>Une entrée remarquable pour votre maison !</h2>
-    <p>
-      On dit souvent que la première impression est la plus importante. La porte d’entrée est la véritable signature de votre habitation : elle reflète votre style, tout en assurant isolation et sécurité. Son choix mérite donc une attention toute particulière.
-
-Les systèmes de portes et fenêtres REHAU répondent à ces exigences grâce à une large gamme de solutions alliant design, performance thermique et protection renforcée. Entièrement compatibles avec tous les styles de fenêtres, les portes en PVC issues des profilés REHAU offrent une finition homogène et de qualité dans l’ensemble de votre maison.
-    </p>
-
-    <a href="#about" class="btn-projet">voire plus ?</a>
-  </section>
-
-
-
-
-
-
-
-  <!-- Departments Section -->
-<section id="departments" class="departments section py-5 sticky-top " style="background-color:#f4f6f8;">
-
-      <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        
-
-<nav id="navmenu" class="navmenu always-visible-menu">
-  <ul>
-    <li><a href="#about" class="active">Présentation</a></li>
-    <li><a href="#couleurs">couleurs</a></li>
-<li><a href="#caracteristiques">Caractéristiques</a></li>
-<li><a href="#types">Types</a></li>
-  </ul>
-  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
-
-      </div>
-
-    </div>
+  <h2>Maluvpro vous propose une gamme variée de services.</h2>
+  <p>
+Nous proposons des solutions de fermetures adaptées, incluant l’installation et l’entretien de portes, portails et rideaux métalliques. Notre équipe intervient également pour tous vos dépannages, qu’il s’agisse d’une panne, d’un blocage ou d’une réparation nécessaire. En cas d’imprévu, notre service d’urgence disponible 24h/24 et 7j/7 assure une intervention rapide et efficace afin de garantir votre tranquillité au quotidien.  </p>
 </section>
   </header>
-
   <main class="main">
 
- 
+<!-- Services Section End -->
+<section id="alternating-section" style="max-width: 1200px; margin: auto; padding: 40px 20px;">
+  <div id="volet" class="block">
+    <div class="image">
+      <img src="assets/img/voletelectrique.png" alt="Image 3" />
+    </div>
+    <div class="text">
+<h3>🚪 Dépannage et réparation de volets roulants</h3>
+<p>
+Nous intervenons sur tous types de volets roulants, manuels ou motorisés, quelle que soit la marque. Blocage, moteur en panne, manivelle cassée, sangle abîmée, lames endommagées ou tablier décroché : nos techniciens assurent la réparation ou le remplacement des pièces nécessaires (moteur, treuil, attaches, cordon, télécommande, tablier en PVC, alu, bois ou acier).
+<br>
+Nous proposons également la motorisation de vos volets roulants pour plus de confort et de praticité.
+<h5>
+    Nos engagements :
+</h5>
+- Intervention rapide (souvent dès la 1ʳᵉ visite) <br>
 
+- Réparation privilégiée avant remplacement <br>
 
-   <!-- About Section -->
-<section id="about" class="about section">
+- Garantie sur les pièces et la main-d’œuvre
 
-  <div class="container">
-
-    <div class="row gy-4 gx-5">
-
-      <div class="col-lg-6 position-relative align-self-start">
-<table class="table table-bordered table-striped shadow-sm">
-  <thead class="table-light">
-    <tr>
-      <th colspan="2" class="text-center">Avantages des portes d'entrée en PVC </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>✅ Isolation thermique</td>
-      <td>La meilleure isolation thermique du marché</td>
-    </tr>
-    <tr>
-      <td>✅ Isolation acoustique</td>
-      <td>Une excellente isolation acoustique</td>
-    </tr>
-    <tr>
-      <td>✅ Sécurité</td>
-      <td>Bénéficiez du plus haut niveau de sécurité grâce à une protection améliorée contre le cambriolage</td>
-    </tr>
-    <tr>
-      <td>✅ Personnalisation</td>
-      <td>Liberté de conception avec plus de 220 couleurs et une grande variété de formes</td>
-    </tr>
-    <tr>
-      <td>✅ Entretien facile</td>
-      <td>Des portes propres et brillantes grâce à la technologie HDF (Finition haute définition) pour des surfaces lisses et faciles à entretenir</td>
-    </tr>
-    <tr>
-      <td>✅ Écologie</td>
-      <td>Contribuez au respect de l'environnement grâce à une production économe en ressources</td>
-    </tr>
-  </tbody>
-</table>
-
-
+</p>   
 
 </div>
-
-
-      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-        <h3>Présentation portes PVC</h3>
-        <p>
-        Les portes d'entrée en PVC allient performance, esthétique et durabilité pour répondre aux besoins modernes des habitations. Grâce à leur excellente isolation thermique et acoustique, elles assurent un confort optimal tout en réduisant les consommations énergétiques. La technologie de finition haute définition (HDF) garantit des surfaces lisses, brillantes et faciles d'entretien, assurant ainsi un aspect neuf durable dans le temps.
-        </p>
-       
-      </div>
-
-    </div>
-
+    
   </div>
+  <div id="fenetre" class="block">
+    
+    <div class="text">
+      <h3>🪟 Réparation fenetre </h3>
+<p>
+Nous prenons en charge la réparation de tous types de fenêtres (PVC, aluminium, bois). Qu’il s’agisse d’une poignée cassée, d’une charnière fragilisée, d’un vitrage fissuré, d’un mécanisme bloqué ou d’une étanchéité défectueuse, nos techniciens interviennent rapidement pour rétablir confort, sécurité et isolation
+<h5>Nos atouts :
+</h5>
 
-</section>
-<!-- /About Section -->
-<section id="couleurs" class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-4">
-      <h2 class="fw-bold">Couleurs disponibles</h2>
-      <p class="text-muted">Plus de 220 couleurs et une grande variété de formes.</p>
-    </div>
+- Diagnostic précis et devis gratuit <br>
 
-    <!-- Palette de couleurs -->
-    <div class="palette-couleurs d-flex flex-wrap justify-content-center gap-3">
-      <div class="couleur" style="background-color: #FFFFFF;" title="Blanc"></div>
-      <div class="couleur" style="background-color: #000000;" title="Noir"></div>
-      <div class="couleur" style="background-color: #C0C0C0;" title="Gris alu"></div>
-      <div class="couleur" style="background-color: #8B4513;" title="Chêne foncé"></div>
-      <div class="couleur" style="background-color: #D2B48C;" title="Bois clair"></div>
-      <div class="couleur" style="background-color: #1C94AE;" title="Bleu moderne"></div>
-      <div class="couleur" style="background-color: #B22222;" title="Rouge bordeaux"></div>
-      <div class="couleur" style="background-color: #F5DEB3;" title="Sable"></div>
-      <!-- Tu peux en ajouter autant que tu veux -->
-    </div>
+- Intervention rapide à Paris et ses alentours <br>
 
-    <div class="text-center mt-3">
-      <small class="text-muted">* Plusieurs autres couleurs sont disponibles.</small>
+- Réparation sur mesure selon le type et l’état de votre fenêtre <br>
+
+- Garantie sur les pièces et la main-d’œuvre
+</p>   
+
+</div>
+    <div class="image">
+      <img src="assets/img/service2.jpg" alt="Image 3" />
     </div>
   </div>
+  <div id="serrurerie" class="block">
+    <div class="image">
+      <img src="assets/img/service3.jpg" alt="Image 3" />
+    </div>
+    <div class="text">
+<h3>🚪 Serrurière:</h3>
+<p>
+      Nous vous proposons trois services essentiels pour assurer votre sécurité et votre confort :
+      <br>- <strong>Ouverture de porte</strong> en cas de clés perdues, porte claquée ou bloquée.
+      <br>- <strong>Changement de cylindre</strong> pour sécuriser rapidement vos accès.
+      <br>- <strong>Remplacement de serrure</strong> toutes marques, adapté à vos besoins.
+    </p>
+    <p>
+      Nos interventions sont rapides, fiables et garanties, avec un service disponible en urgence 24h/24 et 7j/7.
+      ici je veut ajouter 3 images l un a coté de l'autre 
+    </p>  
+</div>
+  </div>
 </section>
+
 <style>
-  #couleurs h2 {
-  font-size: 2rem;
-}
-
-.palette-couleurs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.couleur {
-  width: 50px;
-  height: 50px;
+    #alternating-section .image img {
+  width: auto;          /* ne force pas la largeur */
+  max-width: 100%;      /* au max la largeur du conteneur */
+  max-height: 300px;    /* limite la hauteur à 300px (tu peux ajuster) */
+  display: block;
   border-radius: 8px;
-  border: 2px solid #ccc;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+  object-fit: contain;  /* garde les proportions sans déformer */
 }
 
-.couleur:hover {
-  transform: scale(1.1);
-  border-color: #333;
-}
+  #alternating-section .block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  #alternating-section .block.reverse {
+    flex-direction: row-reverse;
+  }
 
+  #alternating-section .image,
+  #alternating-section .text {
+    flex: 1;
+  }
+
+  #alternating-section .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  #alternating-section .text h3 {
+    margin-bottom: 12px;
+  }
+
+  #alternating-section .text p {
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #alternating-section .block,
+    #alternating-section .block.reverse {
+      flex-direction: column !important;
+    }
+    #alternating-section .image,
+    #alternating-section .text {
+      width: 100%;
+    }
+  }
 </style>
-
-<!-- Services Section End -->
-<section id="caracteristiques">
-  <div class="caracteristiques-pvc">
-    <h2>Caractéristiques techniques des portes PVC</h2>
-
-    <div class="table-responsive">
-       <table class="table table-bordered table-striped text-center align-middle">
-        <thead class="table-dark">
-          <tr>
-            <th>Type de porte</th>
-            <th>Description</th>
-            <th>Utilisation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Porte d’entrée PVC</td>
-            <td>Porte principale offrant une bonne isolation et sécurité.</td>
-            <td>Entrée de maison ou d’appartement</td>
-          </tr>
-          <tr>
-            <td>Porte-fenêtre PVC</td>
-            <td>Porte vitrée coulissante ou battante, souvent utilisée pour accéder à un balcon ou jardin.</td>
-            <td>Terrasses, balcons, vérandas</td>
-          </tr>
-          <tr>
-            <td>Porte PVC pleine</td>
-            <td>Sans vitrage, pour plus de sécurité et d’intimité.</td>
-            <td>Entrées secondaires, caves, garages</td>
-          </tr>
-          <tr>
-            <td>Porte PVC semi-vitrée</td>
-            <td>Partiellement vitrée pour allier luminosité et intimité.</td>
-            <td>Entrées, couloirs, pièces sombres</td>
-          </tr>
-          <tr>
-            <td>Porte PVC entièrement vitrée</td>
-            <td>Offre un maximum de lumière naturelle, avec vitrage sécurisé.</td>
-            <td>Jardins, terrasses, vérandas</td>
-          </tr>
-          <tr>
-            <td>Porte PVC coulissante</td>
-            <td>Gain de place et large ouverture vers l’extérieur.</td>
-            <td>Accès extérieur avec vue dégagée</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<style>.caracteristiques-pvc {
-  background-color: #f4f6f8;
-  padding: 50px 30px;
-  border-radius: 10px;
-  max-width: 1000px;
-  margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.caracteristiques-pvc h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #0d3c61;
-  font-size: 28px;
-}
-
-.table-responsive {
-  overflow-x: auto;
-}
-
-.table-caracteristiques {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  font-size: 16px;
-}
-
-.table-caracteristiques th,
-.table-caracteristiques td {
-  padding: 14px;
-  border: 1px solid #ddd;
-  text-align: left;
-  vertical-align: top;
-}
-
-.table-caracteristiques thead tr {
-  background-color: #007bff;
-  color: white;
-}
-
-.table-caracteristiques tr:hover {
-  background-color: #f1f1f1;
-}
-</style>
-
-</section><!-- /Stats Section --> 
- <section id="types" class="py-5 bg-light">
-  <div class="container">
-    <div id="carouselFenetres3" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="d-flex flex-nowrap justify-content-center gap-3">
-            <!-- Carte 1 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/porteentreepvc.jpg" class="card-img-top" alt="Porte d’entrée PVC">
-                <div class="small-badge bg-white text-danger border">1</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte d’entrée PVC</h5>
-              </div>
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/portefenetre.png" class="card-img-top" alt="Porte-fenêtre PVC">
-                <div class="small-badge bg-white text-danger border">2</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte-fenêtre PVC</h5>
-              </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/32159-g.jpg" class="card-img-top" alt="Porte PVC pleine">
-                <div class="small-badge bg-white text-danger border">3</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte PVC pleine</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="d-flex flex-nowrap justify-content-center gap-3">
-            <!-- Carte 4 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/pvcsemi.jpg" class="card-img-top" alt="Porte PVC semi-vitrée">
-                <div class="small-badge bg-white text-danger border">4</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte PVC semi-vitrée</h5>
-              </div>
-            </div>
-
-            <!-- Carte 5 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/porte-d-entree-vitree-dia-sur-mesure.jpg" class="card-img-top" alt="Porte vitrée">
-                <div class="small-badge bg-white text-danger border">5</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte vitrée</h5>
-              </div>
-            </div>
-
-            <!-- Carte 6 -->
-            <div class="card custom-card">
-              <div class="position-relative">
-                <img src="assets/img/Altek_PVC_Porte_Coulissante_Face_1875x1500 (1).png" class="card-img-top" alt="Porte coulissante">
-                <div class="small-badge bg-white text-danger border">6</div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title">Porte coulissante</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Flèches -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFenetres3" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="visually-hidden">Précédent</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselFenetres3" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="visually-hidden">Suivant</span>
-      </button>
-    </div>
-  </div>
-</section>
- 
-<style>
-/* Cartes */
-.custom-card {
-  width: 300px;
-  flex-shrink: 0;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Image */
-.custom-card .card-img-top {
-  height: 220px;
-  object-fit: contain;
-  background-color: #fff;
-}
-
-/* Badge */
-.small-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
-  font-size: 0.9rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-
-/* Flèches personnalisées */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #E54040;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-size: 60% 60%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Flèches container plus étroit */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-</style>
-
-
 
   
     <!-- Contact Section -->

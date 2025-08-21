@@ -2130,3 +2130,91 @@ section,
   margin: 0;
   padding: 0;
 }
+.services {
+  padding: 50px;
+  text-align: center;
+}
+
+.services .title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #003399;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color: #222;
+}
+
+.service-card a {
+  color: #0a4db7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #182273; /* bleu foncé */
+  color: white;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  margin: 10px;
+  flex: 1 1 150px;
+}
+
+.feature i {
+  font-size: 28px;
+  color: #ef4536; /* bleu clair pour les icônes */
+  margin-bottom: 8px;
+  display: block;
+}
+
+.feature p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.service-card a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+  color: darkred; /* optionnel pour le hover */
+}
