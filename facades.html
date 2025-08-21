@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Maluvpro</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+ 
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+<style>
+  
+#mur, #vitrine {
+  scroll-margin-top: 100px;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #111;
+    }
+.tabs {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px 0 20px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #f5f5f5;
+    }
+
+    .tabs a {
+      text-decoration: none;
+      color: #333;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tabs a.active {
+      color: #d32f2f;
+      border-bottom: 2px solid #d32f2f;
+      font-weight: 600;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      background-color: #fff;
+      width: 320px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px 20px 40px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .card .number-badge {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card .red-line {
+      height: 2px;
+      width: 30px;
+      background-color: #d32f2f;
+      margin: 20px auto 0;
+    }
+
+    .btn-accessoires {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border: 1px solid #d32f2f;
+      color: #111;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-accessoires:hover {
+      background-color: #d32f2f;
+      color: white;
+    }
+
+    @media (max-width: 1000px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+    /* Hero Section */
+    .hero .text-container h2,
+.hero .text-container p {
+  color: #ffffff; /* blanc, tu peux mettre n'importe quelle couleur */
+}
+
+ .hero {
+  background-image: url('assets/img/brick-facade-in-loft-style-3-vector-17871071.jpg'); /* Remplace par le bon chemin */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* pleine hauteur d'écran */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Optionnel : effet de superposition sombre */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.text-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+    /* Content Section */
+    .content-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .content-section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .content-section p {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .btn-projet {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 1px solid #cc0000;
+      color: #cc0000;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-projet:hover {
+      background-color: #cc0000;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .image-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+<body class="index-page">
+
+  <header id="header" class="header ">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Maluvprobenyoussef@gmail.com></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+33 6 61 16 97 99</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
+        </a>
+
+         <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" >Accueil<br></a></li>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li class="dropdown" ><a href="#" class="active"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteentréepvc.html">PVC</a></li>
+                    <li><a href="porteentréealuminium.html">Aluminium</a></li>
+                    <li><a href="porteentréeblindee.html">Blindée</a></li>
+                  </ul>
+                </li>
+               <li class="dropdown"><a href="#"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
+                          <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
+                          <li><a href="porteautomatique.html#coulissantecintrées">Coulissante cintrées ou ronde</a></li>
+                          <li><a href="porteautomatique.html#coulissantetambours">Tambours</a></li>
+                          <li><a href="porteautomatique.html#coulissanteétanches">Coulissante étanches et vitrées</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Fenêtres</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="fenetrespvc.html">PVC</a></li>
+                          <li><a href="fenetresaluminium.html">Aluminium</a></li>
+                          <li><a href="fenetresbois.html">Bois</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                   <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
+                          <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
+                          <li><a href="volets.html#battant">battants</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                      <li><a href="facades.html#mur">Mur Rideaux</a></li>
+                          <li><a href="facades.html#vitrine">Vitrine</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
+                          <li><a href="garage.html#enroulable">Enroulable</a></li>
+                          <li><a href="garage.html#latérale">Latérale</a></li>
+                          <li><a href="garage.html#battante">battante</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
+                    <li><a href="portail.html#battant">portail battant</a></li>
+                    <li><a href="portail.html#portillion">Portillion</a></li>
+                    <li><a href="portail.html#clotures">clotures</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
+                    <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
+                    <li><a href="serrurerie.html#blindageporte">Blindage porte</a></li>
+                    <li><a href="serrurerie.html#ouvertureporte">Ouverture porte</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#contact">Notre contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+<a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+  <!-- Section Title -->
+
+
+
+ 
+
+
+  <!-- Hero Section -->
+  <section class="hero-text-typing hero">
+  <div class="text-container" data-aos="fade-up">
+    <h2 id="typed-text">Façades</h2>
+    <p id="typed-subtext">la rénovation et la pose de façades modernes et traditionnelles.</p>
+  </div>
+</section>
+<script>
+function typeWriter(elementId, text, delay = 100, callback) {
+  const element = document.getElementById(elementId);
+  element.textContent = '';
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, delay);
+    } else {
+      if (callback) callback();
+    }
+  }
+  type();
+}
+
+// Lancer l’animation sur les deux textes
+window.onload = () => {
+  typeWriter('typed-text', 'Façades', 120, () => {
+    // Quand le titre est fini, on tape la phrase en dessous
+    typeWriter('typed-subtext', "la rénovation et la pose de façades modernes et traditionnelles.", 50);
+  });
+};
+</script>
+  <!-- Content Section -->
+  <section class="content-section">
+  <h2>Vitrine et mur-rideau</h2>
+  <p>
+    Une vitrine est une large surface vitrée en façade, souvent utilisée dans les commerces pour exposer des produits. Le mur-rideau, quant à lui, est une façade légère en verre fixée sur une structure porteuse, couramment utilisée dans les immeubles modernes.
+  </p>
+</section>
+<style>
+    
+</style>
+  <!-- Departments Section -->
+<section id="departments" class="departments section py-5 sticky-top " style="background-color:#f4f6f8;">
+
+      <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        
+
+<nav id="navmenu" class="navmenu always-visible-menu">
+  <ul>
+    <li><a href="#couleurs">couleurs</a></li>
+<li><a href="#alternating-section">Types</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+      </div>
+
+    </div>
+</section>
+  </header>
+  <main class="main">
+<section id="types" class="py-5 bg-light">
+  <div class="container">
+    <div id="carouselFenetres4" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-nowrap justify-content-center gap-3">
+            <!-- Carte 1 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindée.png" class="card-img-top" alt="Porte d’entrée PVC">
+                              <div> porte blindée appartement</div>
+
+                <div class="small-badge bg-white text-danger border">1</div>
+
+              </div>
+              
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindee2.png" class="card-img-top" alt="Porte-fenêtre PVC">
+                              <div> porte blindée maison</div>
+                <div class="small-badge bg-white text-danger border">2</div>
+              </div>
+            
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindee3.png" class="card-img-top" alt="Porte PVC pleine">
+                              <div> porte de communication intérieure</div>
+
+                <div class="small-badge bg-white text-danger border">3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-nowrap justify-content-center gap-3">
+            <!-- Carte 4 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindeecave.png" class="card-img-top" alt="Porte PVC semi-vitrée">
+                              <div> porte blindée cave</div>
+                <div class="small-badge bg-white text-danger border">4</div>
+              </div>
+            </div>
+<div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindée.png" class="card-img-top" alt="Porte d’entrée PVC">
+                              <div> porte blindée appartement</div>
+
+                <div class="small-badge bg-white text-danger border">1</div>
+
+              </div>
+              
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/porteblindee2.png" class="card-img-top" alt="Porte-fenêtre PVC">
+                              <div> porte blindée maison</div>
+                <div class="small-badge bg-white text-danger border">2</div>
+              </div>
+            
+            </div>
+            
+        </div>
+
+      </div>
+
+      <!-- Flèches -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFenetres4" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFenetres4" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </div>
+</section>
+ 
+<style>
+/* Cartes */
+.custom-card {
+  width: 300px;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.custom-card .card-img-top {
+  height: 220px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* Badge */
+.small-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Flèches personnalisées */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #E54040;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Flèches container plus étroit */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+</style>
+
+<!-- /About Section -->
+<section id="couleurs" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Couleurs disponibles</h2>
+      <p class="text-muted">Plusieurs autres couleurs sont disponibles.</p>
+    </div>
+
+    <!-- Palette de couleurs -->
+    <div class="palette-couleurs d-flex flex-wrap justify-content-center gap-3">
+      <div class="couleur" style="background-color: #FFFFFF;" title="Blanc"></div>
+      <div class="couleur" style="background-color: #000000;" title="Noir"></div>
+      <div class="couleur" style="background-color: #C0C0C0;" title="Gris alu"></div>
+      <div class="couleur" style="background-color: #8B4513;" title="Chêne foncé"></div>
+      <div class="couleur" style="background-color: #D2B48C;" title="Bois clair"></div>
+      <div class="couleur" style="background-color: #1C94AE;" title="Bleu moderne"></div>
+      <div class="couleur" style="background-color: #B22222;" title="Rouge bordeaux"></div>
+      <div class="couleur" style="background-color: #F5DEB3;" title="Sable"></div>
+      <!-- Tu peux en ajouter autant que tu veux -->
+    </div>
+
+    <div class="text-center mt-3">
+      <small class="text-muted">* Plusieurs autres couleurs sont disponibles.</small>
+    </div>
+  </div>
+</section>
+<style>
+  #couleurs h2 {
+  font-size: 2rem;
+}
+
+.palette-couleurs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.couleur {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.couleur:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+</style>
+<!-- Services Section End -->
+<section id="alternating-section" style="max-width: 1200px; margin: auto; padding: 40px 20px;">
+  <div id="mur" class="block">
+    <div class="image">
+      <img src="assets/img/mur-rideau-bureaux-1024x683.jpg" alt="Image 3" />
+    </div>
+    <div class="text">
+      <h3>mur-rideaux</h3>
+<p>
+Le mur-rideau est une façade vitrée légère, fixée à la structure du bâtiment, qui combine esthétique moderne, luminosité naturelle et performance énergétique.<br>
+<h5>Avantages :</h5>
+-Luminosité naturelle : maximise l’entrée de la lumière dans le bâtiment.
+<br>
+-Isolation thermique et acoustique : grâce aux vitrages performants.
+<br>
+- Légèreté : n’ajoute pas de poids important à la structure.
+<br>
+- Résistance aux intempéries : conçu pour faire face au vent, à la pluie et aux variations climatiques.
+</p>   
+
+</div>
+    
+  </div>
+  <div id="vitrine" class="block">
+    
+    <div class="text">
+      <h3>Vitrine</h3>
+<p>
+Le mur-rideau est une façade vitrée légère, fixée à la structure du bâtiment, qui combine esthétique moderne, luminosité naturelle et performance énergétique.<br>
+<h5>Avantages :</h5>
+-Luminosité naturelle : maximise l’entrée de la lumière dans le bâtiment.
+<br>
+-Isolation thermique et acoustique : grâce aux vitrages performants.
+<br>
+- Légèreté : n’ajoute pas de poids important à la structure.
+<br>
+- Résistance aux intempéries : conçu pour faire face au vent, à la pluie et aux variations climatiques.
+</p>   
+
+</div>
+    <div class="image">
+      <img src="assets/img/vitrine.png" alt="Image 3" />
+    </div>
+  </div>
+</section>
+
+<style>
+    #alternating-section .image img {
+  width: auto;          /* ne force pas la largeur */
+  max-width: 100%;      /* au max la largeur du conteneur */
+  max-height: 300px;    /* limite la hauteur à 300px (tu peux ajuster) */
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;  /* garde les proportions sans déformer */
+}
+
+  #alternating-section .block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  #alternating-section .block.reverse {
+    flex-direction: row-reverse;
+  }
+
+  #alternating-section .image,
+  #alternating-section .text {
+    flex: 1;
+  }
+
+  #alternating-section .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  #alternating-section .text h3 {
+    margin-bottom: 12px;
+  }
+
+  #alternating-section .text p {
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #alternating-section .block,
+    #alternating-section .block.reverse {
+      flex-direction: column !important;
+    }
+    #alternating-section .image,
+    #alternating-section .text {
+      width: 100%;
+    }
+  }
+</style>
+
+  
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contactez-nous et nous serons ravis de répondre à toutes vos questions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.254444142193!2d2.3453688!3d48.8724258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f00592995d1%3A0x9da4af8b41e967aa!2sMALUVPRO%20porte%20et%20fen%C3%AAtre!5e0!3m2!1sfr!2stn!4v1754561771044!5m2!1sfr!2stn" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>22 Rue Bergère, 75009 Paris, France</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 6 61 16 97 99</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>Maluvprobenyoussef@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci ! </div>
+
+                  <button type="submit">Envoyer</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+<!-- Appointment Section Popup -->
+<!-- Popup 3D -->
+<div id="appointment-popup" class="appointment-popup">
+  <div class="appointment-content">
+    <span id="close-appointment" class="close-btn">&times;</span>
+    <h2>Prendre rendez-vous pour mesures et consultation </h2>
+    <p>Vous pouvez prendre rendez-vous pour les mesures et la consultation.</p>
+
+    <form action="forms/appointment.php" method="post" class="php-email-form">
+  <div>
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre Email" required>
+    <input type="tel" name="phone" placeholder="Votre Téléphone" required>
+    <input type="datetime-local" name="date" placeholder="Date de rendez-vous" required>
+    <textarea name="message" rows="5" placeholder="Message"></textarea>
+
+    <!-- Ces 3 éléments sont indispensables pour validate.js -->
+    <div class="loading" style="display: none;">Chargement...</div>
+    <div class="error-message" style="display: none; color: red;"></div>
+    <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé avec succès !</div>
+
+    <button type="submit">Prendre un rendez-vous</button>
+  </div>
+</form>
+
+  </div>
+</div>
+
+
+    </section><!-- /Appointment Section -->
+  </main>
+</section>
+<section class="partners-section">
+    <div class="partners-track">
+        <img src="assets/img/partenaires/Rehau-Logo.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/Kline.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/technal.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/tordjman.jpg" alt="Partenaire 4">
+        <!-- Répétition pour un défilement infini -->
+        <img src="assets/img/partenaires/Hormann.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/logo-Tubauto.jpg" alt="Partenaire 2">
+        <img src="assets/img/partenaires/Logo-profalux.webp" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+
+        
+         <img src="assets/img/partenaires/logo_somfy_2.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/faac.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/logo_dea.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+
+    </div>
+</section>
+
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Maluvpro</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>22 Rue Bergère, 75009</p>
+            <p>Paris, France</p>
+            <p class="mt-3"><strong>Téléphone:</strong> <span>+33 6 61 16 97 99</span></p>
+            <p><strong>Email:</strong> <span>Maluvprobenyoussef@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Lien utiles</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li><a href="#">produits</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+      
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maluvpro</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+<!-- Chatbot Maluvpro -->
+<div id="chatbot">
+  <div id="chatbot-header">
+    💬 Assistant Maluvpro
+    <span id="chatbot-close">✖</span> <!-- Croix de fermeture -->
+  </div> 
+  <div id="chatbot-body">
+    <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
+    <div class="bot-message">Choisissez une option ci-dessous :</div>
+    <div class="options">
+      <button onclick="showMessage('services')">📌 Nos Services</button>
+      <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
+      <button onclick="showMessage('contact')">📞 Contact</button>
+    </div>
+  </div>
+  <div id="chatbot-footer">
+    <input type="text" id="userInput" placeholder="Écrivez ici..." onkeypress="handleKey(event)">
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<!-- Bouton flottant pour ouvrir/fermer -->
+<div id="chatbot-toggle">💬</div> <!-- nouvelle icône -->
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

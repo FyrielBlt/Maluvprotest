@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Maluvpro</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+
+<link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- jQuery nécessaire pour Turn.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Turn.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Scripts nécessaires -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+<style>
+  #couleur-section {
+  background-color: #f8f8f8; /* fond clair */
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #222;
+}
+
+#couleur-section .section-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #c94e4e; /* rouge discret */
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#couleur-section .section-heading {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+/* Conteneur grille 2 colonnes avec 4 éléments */
+#couleur-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 30px 40px;
+  align-items: center;
+}
+
+/* Première image */
+#couleur-section .item-img1 img,
+#couleur-section .item-img2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Texte 1 à côté de la première image */
+#couleur-section .item-text1 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+#couleur-section .item-text1 h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Texte 2 sous la première ligne */
+#couleur-section .item-text2 {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Place le texte 2 à gauche en bas, image 2 à droite en bas */
+#couleur-section .item-text2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#couleur-section .item-img2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Responsive - une colonne sur petit écran */
+@media (max-width: 768px) {
+  #couleur-section .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #couleur-section .item-text2,
+  #couleur-section .item-img2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  #couleur-section .item-text1,
+  #couleur-section .item-text2,
+  #couleur-section .item-img1,
+  #couleur-section .item-img2 {
+    margin-bottom: 30px;
+  }
+}
+.voir-plus-btn {
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #d70000; /* Rouge */
+  background-color: transparent;
+  border: 2px solid #d70000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.voir-plus-btn:hover {
+  background-color: #d70000;
+  color: #fff;
+}
+
+</style>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:maluvprobenyoussef@gmail.com">Maluvprobenyoussef@gmail.com</i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+33 6 61 16 97 99</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" >Accueil<br></a></li>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li class="dropdown" ><a href="#" class="active"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteentréepvc.html">PVC</a></li>
+                    <li><a href="porteentréealuminium.html">Aluminium</a></li>
+                    <li><a href="porteentréeblindee.html">Blindée</a></li>
+                  </ul>
+                </li>
+               <li class="dropdown"><a href="#"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
+                          <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
+                          <li><a href="porteautomatique.html#coulissantecintrées">Coulissante cintrées ou ronde</a></li>
+                          <li><a href="porteautomatique.html#coulissantetambours">Tambours</a></li>
+                          <li><a href="porteautomatique.html#coulissanteétanches">Coulissante étanches et vitrées</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Fenêtres</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="fenetrespvc.html">PVC</a></li>
+                          <li><a href="fenetresaluminium.html">Aluminium</a></li>
+                          <li><a href="fenetresbois.html">Bois</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                   <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
+                          <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
+                          <li><a href="volets.html#battant">battants</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                      <li><a href="facades.html#mur">Mur Rideaux</a></li>
+                          <li><a href="facades.html#vitrine">Vitrine</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
+                          <li><a href="garage.html#enroulable">Enroulable</a></li>
+                          <li><a href="garage.html#latérale">Latérale</a></li>
+                          <li><a href="garage.html#battante">battante</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
+                    <li><a href="portail.html#battant">portail battant</a></li>
+                    <li><a href="portail.html#portillion">Portillion</a></li>
+                    <li><a href="portail.html#clotures">clotures</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
+                    <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
+                    <li><a href="serrurerie.html#blindageporte">Blindage porte</a></li>
+                    <li><a href="serrurerie.html#ouvertureporte">Ouverture porte</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#contact">Notre contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+<a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section light-background">
+  <div class="swiper hero-swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 : ton Hero original -->
+      <div class="swiper-slide">
+        <!-- Tout ton code existant du Hero original -->
+        <img src="assets/img/carousel-1.jpg" alt="" data-aos="fade-in">
+
+        <div class="container position-relative">
+          <div class="content row gy-4">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+                <h3>Pourquoi choisir Maluvpro?</h3>
+                <p>
+                  Maluvpro est votre partenaire expert en solutions de fermetures et menuiserie sur mesure...
+                </p>
+                <div class="text-center">
+                  <a href="#about" class="more-btn"><span>Qui sommes nous?</span> <i class="bi bi-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8 d-flex align-items-stretch">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="row gy-4">
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                      <div class="icon-box-inner">
+                        <i class="bi bi-clipboard-data"></i>
+                        <h4>Pose de menuiseries</h4>
+                        <p>Notre équipe technique assure la pose et l’installation de vos projets clés en main...</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                      <div class="icon-box-inner">
+                        <i class="bi bi-gem"></i>
+                        <h4>Conseils et accompagnement</h4>
+                        <p>Une équipe passionnée afin de vous conseiller et trouver les solutions les plus adaptées...</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                      <div class="icon-box-inner">
+                        <i class="bi bi-inboxes"></i>
+                        <h4>SAV Continu</h4>
+                        <p>Maluvpro s’engage à prendre en charge vos éventuelles réclamations...</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+<div class="swiper-slide" style="position: relative;">
+  
+
+<div class="swiper-slide" style="position: relative; width: 100%; height: 80vh;">
+  <!-- Image en arrière-plan -->
+  <img src="assets/img/logo.png" alt="Background" 
+       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+
+ 
+</div>
+
+
+</div>
+
+
+
+    </div>
+
+    <!-- Flèches navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+   <!-- About Section -->
+<section id="about" class="about section">
+
+  <div class="container">
+
+    <div class="row gy-4 gx-5">
+
+      <div class="col-lg-6 position-relative align-self-start">
+  <img src="assets/img/logo.png" alt="Présentation" class="w-100 rounded shadow-sm" style="max-height: 500px; object-fit: contain;" />
+</div>
+
+
+
+
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+        <h3>Des Experts à votre Service…</h3>
+        <p>
+          Maluvpro, fabricant et installateur de menuiseries à Paris et alentours, vous propose des solutions sur mesure alliant performance, esthétisme et durabilité.
+          Certifiés RGE, nous garantissons des prestations de haute qualité, respectueuses de l’environnement.
+          Notre large gamme de portes, fenêtres et fermetures répond à tous vos projets, en rénovation ou construction neuve.
+          Toutes nos réalisations, 100 % fabrication française, sont synonymes de fiabilité et d’expertise locale.
+          Faites confiance à Maluvpro pour des installations élégantes, innovantes et durables.
+        </p>
+        <ul>
+          <li>
+            <i class="fa-solid fa-user-tie"></i>
+            <div>
+              <h5>Le savoir-faire et l'expertise des professionnels de Maluvpro</h5>
+              <p>Notre équipe met à votre service des années d'expérience pour garantir des résultats impeccables.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-tags"></i>
+            <div>
+              <h5>Des services de qualité à des prix abordables</h5>
+              <p>Nous offrons des prestations haut de gamme au meilleur rapport qualité-prix.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-ruler-combined"></i>
+            <div>
+              <h5>Le caractère sur mesure des solutions proposées</h5>
+              <p>Chaque projet est conçu et adapté spécifiquement à vos besoins et à votre habitat.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <h5>Service d'urgence disponible</h5>
+              <p>Une assistance rapide et efficace en cas de problème, 7j/7.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- /About Section -->
+<!-- Services Section Start -->
+<section id="services" class="services section">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+        <h3>Nos Services</h3>
+        <p>
+          Nous disposons de nombreux services pour vous et nous garantissons une qualité supérieure.
+        </p>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Service 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <i class="fas fa-user-check fa-3x me-3"></i>
+                  <div>
+                    <h3>Visites et Prise de Mesures</h3>
+                    <p>Nous effectuons des visites sur site pour prendre les mesures exactes et proposer des solutions adaptées.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <i class="fas fa-cogs fa-3x me-3"></i>
+                  <div>
+                    <h3>Installations sur Mesure</h3>
+                    <p>Nous réalisons des installations personnalisées de portes et fenêtres, adaptées à vos besoins et à votre espace.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <i class="fas fa-sync-alt fa-3x me-3"></i>
+                  <div>
+                    <h3>Rénovation</h3>
+                    <p>Nous rénovons vos menuiseries vieillissantes pour améliorer design, performance et confort thermique et acoustique.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="d-flex">
+                  <i class="fas fa-bolt fa-3x me-3"></i>
+                  <div>
+                    <h3>Urgence et Solutions Fermetures</h3>
+                    <p>En cas de problème imprévu, nous intervenons rapidement pour réparer ou remplacer vos installations de fermetures.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Services Section End -->
+
+   <!-- Stats Section -->
+<section id="stats" class="stats section light-background">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="fas fa-users fa-2x text-primary mb-3"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Équipe</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Taux de fidélité</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="fas fa-smile-beam fa-2x text-primary mb-3"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Satisfaction clients</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="fas fa-check-circle fa-2x text-primary mb-3"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Projets réalisés</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+
+
+
+   <!-- Appointment Section Popup -->
+<!-- Popup 3D -->
+<div id="appointment-popup" class="appointment-popup">
+  <div class="appointment-content">
+    <span id="close-appointment" class="close-btn">&times;</span>
+    <h2>Prendre rendez-vous pour mesures et consultation </h2>
+    <p>Vous pouvez prendre rendez-vous pour les mesures et la consultation.</p>
+
+    <form action="forms/appointment.php" method="post" class="php-email-form">
+  <div>
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre Email" required>
+    <input type="tel" name="phone" placeholder="Votre Téléphone" required>
+    <input type="datetime-local" name="date" placeholder="Date de rendez-vous" required>
+    <textarea name="message" rows="5" placeholder="Message"></textarea>
+
+    <!-- Ces 3 éléments sont indispensables pour validate.js -->
+    <div class="loading" style="display: none;">Chargement...</div>
+    <div class="error-message" style="display: none; color: red;"></div>
+    <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé avec succès !</div>
+
+    <button type="submit">Prendre un rendez-vous</button>
+  </div>
+</form>
+
+  </div>
+</div>
+
+
+    </section><!-- /Appointment Section -->
+
+ 
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Les questions fréquents</h2>
+        <p>Comment vous contacter ?</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>Comment vous contacter ?</h3>
+                <div class="faq-content">
+                  <p>
+Par email ou téléphone via le formulaire de contact sur notre site web.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Quels sont vos horaires de travail ?</h3>
+                <div class="faq-content">
+                  <p>
+Du lundi au samedi, de 8h à 18h.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Quels services proposez-vous ?</h3>
+                <div class="faq-content">
+                  <p>
+R : Nous offrons des solutions complètes de fermetures.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Où êtes-vous situés ?</h3>
+                <div class="faq-content">
+                  <p>
+                    À Paris et ses alentours.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Quels sont vos prix ?</h3>
+                <div class="faq-content">
+                  <p>
+Pour consulter nos prix, veuillez nous contacter via notre formulaire.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Comment prendre des mesures ?</h3>
+                <div class="faq-content">
+                  <p>
+Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+              <div class="faq-item">
+                <h3>Combien de temps cela prend-il ?</h3>
+                <div class="faq-content">
+                  <p>Nous répondrons dans les plus brefs délais et l’installation est toujours effectuée dans les temps.</p>                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+   
+
+    <!-- Gallery Section -->
+    <section id="catalogue" class="gallery section">
+
+      <!-- Section Title -->
+      <div   class="container section-title" data-aos="fade-up">
+        <h2>Réalisations</h2>
+      </div><!-- End Section Title -->
+
+     <section id="couleur-section">
+  <h2 class="section-title">Bienvenue dans le catalogue Maluvpro..</h2>
+  
+  <div class="grid-container">
+    <div class="item-img1">
+      <img src="assets/img/projet1.jpeg" alt="Intérieur avec fenêtre et canapé jaune" />
+    </div>
+    <div class="item-text1">
+      <h3>Premier projet d’installation de fenêtres – Résidence Les Jardins de Lumière</h3>
+      <p>Nous avons récemment eu le plaisir de réaliser notre premier projet d’installation de fenêtres pour la résidence Les Jardins de Lumière, située en périphérie de Paris. Ce projet consistait à remplacer les anciennes fenêtres par des modèles en PVC haute performance, alliant isolation thermique et acoustique, ainsi qu’un design moderne et épuré.</p>
+      <p>Chaque fenêtre a été soigneusement choisie pour optimiser la luminosité naturelle tout en garantissant une excellente étanchéité. Nos équipes ont travaillé en étroite collaboration avec les résidents et les gestionnaires de la copropriété afin de minimiser les nuisances et respecter les délais impartis.</p>
+<a href="URL_DU_FICHIER.pdf" download class="voir-plus-btn">Télécharger le catalogue</a>
+
+    </div>
+
+    <div class="item-text2">
+      <h3>Rénovation des fenêtres d’une maison familiale</h3>
+      <p>Nous avons effectué la rénovation complète des fenêtres et des portes de cette belle maison familiale. Toutes les menuiseries ont été remplacées par des modèles en PVC blanc sur mesure, adaptés à l’architecture classique de la maison.</p>
+    <p>Les fenêtres, notamment celles aux formes en arc, ont été soigneusement conçues pour s’intégrer parfaitement aux ouvertures existantes, tout en assurant une excellente isolation thermique et acoustique.</p>
+    <p>Les portes extérieures, quant à elles, ont été remplacées par des portes robustes et élégantes, alliant sécurité et esthétisme. Leur design moderne tout en respectant le style traditionnel de la maison améliore la luminosité intérieure et l’accessibilité.</p>
+    </div>
+    <div class="item-img2">
+      <img src="assets/img/projet2.jpeg" alt="Fenêtre avec vue sur jardin" />
+    </div>
+
+  </div>
+<a href="URL_DU_FICHIER.pdf" download class="voir-plus-btn">Télécharger le catalogue</a>
+
+</section>
+
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contactez-nous et nous serons ravis de répondre à toutes vos questions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.254444142193!2d2.3453688!3d48.8724258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f00592995d1%3A0x9da4af8b41e967aa!2sMALUVPRO%20porte%20et%20fen%C3%AAtre!5e0!3m2!1sfr!2stn!4v1754561771044!5m2!1sfr!2stn" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>22 Rue Bergère, 75009 Paris, France</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 6 61 16 97 99</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>Maluvprobenyoussef@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci ! </div>
+
+                  <button type="submit">Envoyer</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+<section class="partners-section">
+    <div class="partners-track">
+        <img src="assets/img/partenaires/Rehau-Logo.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/Kline.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/technal.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/tordjman.jpg" alt="Partenaire 4">
+        <!-- Répétition pour un défilement infini -->
+        <img src="assets/img/partenaires/Hormann.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/logo-Tubauto.jpg" alt="Partenaire 2">
+        <img src="assets/img/partenaires/Logo-profalux.webp" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+
+        
+         <img src="assets/img/partenaires/logo_somfy_2.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/faac.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/logo_dea.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+
+    </div>
+</section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Maluvpro</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>22 Rue Bergère, 75009</p>
+            <p>Paris, France</p>
+            <p class="mt-3"><strong>Téléphone:</strong> <span>+33 6 61 16 97 99</span></p>
+            <p><strong>Email:</strong> <span>Maluvprobenyoussef@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Lien utiles</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html">produits</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+          </ul>
+        </div>
+      
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maluvpro</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+<!-- Chatbot Maluvpro -->
+<div id="chatbot">
+  <div id="chatbot-header">
+    💬 Assistant Maluvpro
+    <span id="chatbot-close">✖</span> <!-- Croix de fermeture -->
+  </div> 
+  <div id="chatbot-body">
+    <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
+    <div class="bot-message">Choisissez une option ci-dessous :</div>
+    <div class="options">
+      <button onclick="showMessage('services')">📌 Nos Services</button>
+      <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
+      <button onclick="showMessage('contact')">📞 Contact</button>
+    </div>
+  </div>
+  <div id="chatbot-footer">
+    <input type="text" id="userInput" placeholder="Écrivez ici..." onkeypress="handleKey(event)">
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<!-- Bouton flottant pour ouvrir/fermer -->
+<div id="chatbot-toggle">💬</div> <!-- nouvelle icône -->
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+ 
+
+</body>
+
+</html>
