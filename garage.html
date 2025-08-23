@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.png">
 
 
 </head>
@@ -267,7 +268,7 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Maluvprobenyoussef@gmail.com></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Maluvprobenyoussef@gmail.com</i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+33 6 61 16 97 99</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
@@ -287,13 +288,15 @@
           <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
         </a>
 
-       <nav id="navmenu" class="navmenu">
+     <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html" >Accueil</a></li>
+            <li><a href="index.html#hero" >Accueil</a></li>
             <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#about">A propos</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li class="dropdown" ><a href="#" class="active"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="index.html#contact">Notre contact</a></li>
+
+            <li class="dropdown" ><a href="#" ><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
@@ -302,7 +305,7 @@
                     <li><a href="porteentréeblindee.html">Blindée</a></li>
                   </ul>
                 </li>
-               <li class="dropdown"><a href="#"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+               <li class="dropdown"><a href="porteautomatique.html"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
                           <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
@@ -318,20 +321,20 @@
                           <li><a href="fenetresbois.html">Bois</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="volets.html"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                    <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
                           <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
                           <li><a href="volets.html#battant">battants</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="facades.html"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                       <li><a href="facades.html#mur">Mur Rideaux</a></li>
                           <li><a href="facades.html#vitrine">Vitrine</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="garage.html"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
                           <li><a href="garage.html#enroulable">Enroulable</a></li>
@@ -339,7 +342,7 @@
                           <li><a href="garage.html#battante">battante</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="portail.html"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
                     <li><a href="portail.html#battant">portail battant</a></li>
@@ -347,17 +350,14 @@
                     <li><a href="portail.html#clotures">clotures</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="serrurerie.html"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
                     <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
-                    <li><a href="serrurerie.html#blindageporte">Blindage porte</a></li>
-                    <li><a href="serrurerie.html#ouvertureporte">Ouverture porte</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li><a href="#contact">Notre contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -731,12 +731,12 @@ Disponible en sur-mesure jusqu’à 2500 mm de hauteur et 3000 mm de largeur, el
         <img src="assets/img/partenaires/Rehau-Logo.png" alt="Partenaire 1">
         <img src="assets/img/partenaires/Kline.png" alt="Partenaire 2">
         <img src="assets/img/partenaires/technal.png" alt="Partenaire 3">
-        <img src="assets/img/partenaires/tordjman.jpg" alt="Partenaire 4">
+        <img src="assets/img/partenaires/tordjman.png" alt="Partenaire 4">
         <!-- Répétition pour un défilement infini -->
         <img src="assets/img/partenaires/Hormann.png" alt="Partenaire 1">
-        <img src="assets/img/partenaires/logo-Tubauto.jpg" alt="Partenaire 2">
+        <img src="assets/img/partenaires/logo-Tubauto.png" alt="Partenaire 2">
         <img src="assets/img/partenaires/Logo-profalux.webp" alt="Partenaire 3">
-        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+        <img src="assets/img/partenaires/record.png" alt="Partenaire 4">
 
         
          <img src="assets/img/partenaires/logo_somfy_2.png" alt="Partenaire 1">
@@ -774,11 +774,10 @@ Disponible en sur-mesure jusqu’à 2500 mm de hauteur et 3000 mm de largeur, el
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Lien utiles</h4>
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Catalogue</a></li>
-            <li><a href="#">produits</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#contact">contact</a></li>
           </ul>
         </div>
       
@@ -833,6 +832,46 @@ Disponible en sur-mesure jusqu’à 2500 mm de hauteur et 3000 mm de largeur, el
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('#navmenu a');
+  const sections = document.querySelectorAll('section[id]');
+  const navMenu = document.getElementById('navmenu');
+  const toggle = document.querySelector('.mobile-nav-toggle');
+
+  // ✅ Ouvrir / fermer menu mobile
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
+  // ✅ Fermer menu mobile après clic sur un lien
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    });
+  });
+
+  // ✅ Gérer le lien actif en scrollant
+  window.addEventListener('scroll', () => {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+});
+</script>
 
 </body>
 

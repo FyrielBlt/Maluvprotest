@@ -1,5 +1,50 @@
 /**
 /* Fonts */
+/* Animation de mouvement fluide (moving wave effect) */
+@keyframes wave {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Style du conteneur */
+.text-animation-moving {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Lettre "M" rouge */
+.letter-m {
+  color: #e60000;
+  font-weight: bold;
+  display: inline-block;
+  animation: wave 2s infinite ease-in-out;
+}
+
+/* Reste du mot "aluvpro" en bleu */
+.letter-rest {
+  color: #003366;
+  font-weight: bold;
+  display: inline-block;
+  animation: wave 2s infinite ease-in-out;
+  animation-delay: 0.2s;
+}
+
+/* Sous-texte */
+.text-animation-moving p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #003366;
+  animation: fadeIn 2s ease-in-out;
+  animation-delay: 0.5s;
+}
 
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

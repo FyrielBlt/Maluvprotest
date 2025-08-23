@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Exécuter cette logique uniquement lors de la première visite
+    if (!localStorage.getItem('firstVisitDone')) {
+      localStorage.removeItem('chatbotAutoOpened');
+      localStorage.setItem('firstVisitDone', 'true');
+    }
+  });
+</script>
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Maluvpro</title>
@@ -189,11 +199,13 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html" >Accueil</a></li>
-            <li><a href="index.html#depannage">Depannage et réparation</a></li>
+            <li><a href="index.html#hero" >Accueil</a></li>
             <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li class="dropdown" ><a href="#" class="active"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="index.html#contact">Notre contact</a></li>
+
+            <li class="dropdown" ><a href="#" ><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
@@ -202,7 +214,7 @@
                     <li><a href="porteentréeblindee.html">Blindée</a></li>
                   </ul>
                 </li>
-               <li class="dropdown"><a href="#"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+               <li class="dropdown"><a href="porteautomatique.html"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
                           <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
@@ -218,20 +230,20 @@
                           <li><a href="fenetresbois.html">Bois</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="volets.html"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                    <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
                           <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
                           <li><a href="volets.html#battant">battants</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="facades.html"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                       <li><a href="facades.html#mur">Mur Rideaux</a></li>
                           <li><a href="facades.html#vitrine">Vitrine</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="garage.html"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
                           <li><a href="garage.html#enroulable">Enroulable</a></li>
@@ -239,7 +251,7 @@
                           <li><a href="garage.html#battante">battante</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="portail.html"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
                     <li><a href="portail.html#battant">portail battant</a></li>
@@ -247,17 +259,14 @@
                     <li><a href="portail.html#clotures">clotures</a></li>
                   </ul>
                 </li>
-                 <li class="dropdown"><a href="#"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                 <li class="dropdown"><a href="serrurerie.html"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
                     <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
-                    <li><a href="serrurerie.html#blindageporte">Blindage porte</a></li>
-                    <li><a href="serrurerie.html#ouvertureporte">Ouverture porte</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li><a href="#contact">Notre contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -339,15 +348,13 @@
 <div class="swiper-slide" style="position: relative;">
   
 
-<div class="swiper-slide" style="position: relative; width: 100%; height: 80vh;">
-  <!-- Image en arrière-plan -->
-  <img src="assets/img/logo.png" alt="Background" 
-       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
-
- 
-</div>
-
-
+<!-- Slide 2 : Vidéo plein écran -->
+<!-- Slide 3 : Texte animé avec styles -->
+<div class="swiper-slide video-slide" style="background-color: #e0f0ff; display: flex; align-items: center; justify-content: center; height: 100vh;">
+<video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/video/pvc.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
 </div>
 
 
@@ -363,58 +370,7 @@
   </div>
 </section>
 
-  <section class="features">
-  <div class="feature">
-    <i class="fas fa-smile"></i>
-    <p>Devis Gratuit</p>
-  </div>
-  <div class="feature">
-    <i class="fas fa-key"></i>
-    <p>Des experts a votre services</p>
-  </div>
-  <div class="feature">
-    <i class="fas fa-stopwatch"></i>
-    <p>Respect des délais</p>
-  </div>
-  <div class="feature">
-    <i class="fas fa-shield-alt"></i>
-    <p>Certifiés RGE</p>
-  </div>
-  <div class="feature">
-    <i class="fas fa-exclamation-circle"></i>
-    <p>Urgence 7j/7 24h/24</p>
-  </div>
-  <div class="feature">
-    <i class="fas fa-check"></i>
-    <p>Prix compétitifs et qualité garantie</p>
-  </div>
-</section>
 
-<section id="depannage" class="services">
-  <h2 class="title">Nos services</h2>
-  <div class="services-grid">
-
-    <div class="service-card">
-      <img src="assets/img/service1.jpg" alt="Installation de volets roulants">
-      <h3>Réparation de volets roulants électriques </h3>
-      <a href="services.html#alternating-section">savoir plus</a>
-    </div>
-
-    <div class="service-card">
-      <img src="assets/img/service2.jpg" alt="Dépannage de volets roulants">
-      <h3>Réparation fenetre </h3>
-      <a href="services.html#fenetre">savoir plus</a>
-    </div>
-
-    <div class="service-card">
-      <img src="assets/img/service3.jpg" alt="Motorisation volet roulant">
-      <h3>Serrurière(Ouverture porte/
-Changement cylindre/
-Remplacement serrure</h3>
-      <a href="services.html#serrurerie">savoir plus</a>
-    </div>
-  </div>
-</section>
    <!-- About Section -->
 <section id="about" class="about section">
 
@@ -423,7 +379,12 @@ Remplacement serrure</h3>
     <div class="row gy-4 gx-5">
 
       <div class="col-lg-6 position-relative align-self-start">
-  <img src="assets/img/logo.png" alt="Présentation" class="w-100 rounded shadow-sm" style="max-height: 500px; object-fit: contain;" />
+        <div class="text-animation-moving">
+    <h2>
+      <span class="letter-m">M</span><span class="letter-rest">aluvpro</span>
+    </h2>
+    <p>Solutions de fermetures</p>
+  </div>
 </div>
 
       <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
@@ -473,6 +434,58 @@ Remplacement serrure</h3>
 
 </section>
 <!-- /About Section -->
+   <section id="depannage" class="features">
+  <div class="feature">
+    <i class="fas fa-smile"></i>
+    <p>Devis Gratuit</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-key"></i>
+    <p>Des experts a votre services</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-stopwatch"></i>
+    <p>Respect des délais</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-shield-alt"></i>
+    <p>Certifiés RGE</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-exclamation-circle"></i>
+    <p>Urgence 7j/7 24h/24</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-check"></i>
+    <p>Prix compétitifs et qualité garantie</p>
+  </div>
+</section>
+<section  class="services">
+  <h2 class="title">Nos services</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <img src="assets/img/service1.jpg" alt="Installation de volets roulants">
+      <h3>Réparation de volets roulants électriques </h3>
+      <a href="services.html#alternating-section">savoir plus</a>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/img/service2.jpg" alt="Dépannage de volets roulants">
+      <h3>Réparation fenetre </h3>
+      <a href="services.html#fenetre">savoir plus</a>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/img/service3.jpg" alt="Motorisation volet roulant">
+      <h3>Serrurière(Ouverture porte/
+Changement cylindre/
+Remplacement serrure</h3>
+      <a href="services.html#serrurerie">savoir plus</a>
+    </div>
+  </div>
+</section>
+
 <!-- Services Section Start -->
 <section id="services" class="services section">
 
@@ -591,7 +604,7 @@ Remplacement serrure</h3>
       <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
         <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
         <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>
+          <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter">%</span>
           <p>Taux de fidélité</p>
         </div>
       </div><!-- End Stats Item -->
@@ -756,7 +769,7 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
       <h3>Premier projet d’installation de fenêtres – Résidence Les Jardins de Lumière</h3>
       <p>Nous avons récemment eu le plaisir de réaliser notre premier projet d’installation de fenêtres pour la résidence Les Jardins de Lumière, située en périphérie de Paris. Ce projet consistait à remplacer les anciennes fenêtres par des modèles en PVC haute performance, alliant isolation thermique et acoustique, ainsi qu’un design moderne et épuré.</p>
       <p>Chaque fenêtre a été soigneusement choisie pour optimiser la luminosité naturelle tout en garantissant une excellente étanchéité. Nos équipes ont travaillé en étroite collaboration avec les résidents et les gestionnaires de la copropriété afin de minimiser les nuisances et respecter les délais impartis.</p>
-<a href="URL_DU_FICHIER.pdf" download class="voir-plus-btn">Télécharger le catalogue</a>
+<a href="produits.html"  class="voir-plus-btn">Voir plus</a>
 
     </div>
 
@@ -771,7 +784,7 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
     </div>
 
   </div>
-<a href="URL_DU_FICHIER.pdf" download class="voir-plus-btn">Télécharger le catalogue</a>
+<a href="produits.html"  class="voir-plus-btn">Voir plus</a>
 
 </section>
 
@@ -779,7 +792,7 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
     </section><!-- /Gallery Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+<section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -864,12 +877,12 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
         <img src="assets/img/partenaires/Rehau-Logo.png" alt="Partenaire 1">
         <img src="assets/img/partenaires/Kline.png" alt="Partenaire 2">
         <img src="assets/img/partenaires/technal.png" alt="Partenaire 3">
-        <img src="assets/img/partenaires/tordjman.jpg" alt="Partenaire 4">
+        <img src="assets/img/partenaires/tordjman.png" alt="Partenaire 4">
         <!-- Répétition pour un défilement infini -->
         <img src="assets/img/partenaires/Hormann.png" alt="Partenaire 1">
-        <img src="assets/img/partenaires/logo-Tubauto.jpg" alt="Partenaire 2">
+        <img src="assets/img/partenaires/logo-Tubauto.png" alt="Partenaire 2">
         <img src="assets/img/partenaires/Logo-profalux.webp" alt="Partenaire 3">
-        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+        <img src="assets/img/partenaires/record.png" alt="Partenaire 4">
 
         
          <img src="assets/img/partenaires/logo_somfy_2.png" alt="Partenaire 1">
@@ -905,10 +918,9 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Lien utiles</h4>
           <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="index.html#about">A propos</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li><a href="index.html">produits</a></li>
             <li><a href="index.html#contact">contact</a></li>
           </ul>
         </div>
@@ -964,7 +976,35 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
- 
+ <script>
+  // Sélectionne tous les liens du menu
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  // Fonction qui met à jour "active" selon la section visible
+  function setActiveLink() {
+    let fromTop = window.scrollY + 100; // décale un peu pour compenser le header
+
+    navLinks.forEach(link => {
+      let section = document.querySelector(link.getAttribute("href"));
+      if (section) {
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      }
+    });
+  }
+
+  // Lancer au scroll et au chargement
+  window.addEventListener("scroll", setActiveLink);
+  window.addEventListener("load", setActiveLink);
+
+</script>
+
 
 </body>
 

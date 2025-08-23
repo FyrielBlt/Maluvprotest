@@ -231,15 +231,57 @@ document.querySelectorAll('#boisTab button').forEach(btn=>{
   });
 });
 
+  // Ce bloc s'exécute uniquement à la toute première visite du site
+  if (!localStorage.getItem('firstVisitDone')) {
+    // Supprime la clé d'ouverture automatique du chatbot
+    localStorage.removeItem('chatbotAutoOpened');
+
+    // Marque que la première visite a été traitée
+    localStorage.setItem('firstVisitDone', 'true');
+  }
+
+// ✅ Ouverture automatique une seule fois à la première visite
+window.addEventListener("load", function () {
+  const chatbot = document.getElementById('chatbot');
+
+  // Vérifie si le chatbot s'est déjà ouvert automatiquement
+  const alreadyOpened = localStorage.getItem('chatbotAutoOpened');
+
+  if (!alreadyOpened) {
+    // Affiche le chatbot
+    if (chatbot) {
+      chatbot.style.display = 'flex';
+
+      // Message de bienvenue
+      const chatBody = document.getElementById('chatbot-body');
+      if (chatBody) {
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('bot-message');
+        botMessage.textContent = "👋 Bonjour ! Comment pouvons-nous vous aider ?";
+        chatBody.appendChild(botMessage);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+
+      // Son d'accueil
+      const audio = new Audio('https://www.soundjay.com/button/sounds/button-16.mp3');
+      audio.play().catch(e => console.log("Son bloqué", e));
+    }
+
+    // Marquer comme ouvert pour ne pas répéter l'ouverture automatique
+    localStorage.setItem('chatbotAutoOpened', 'true');
+  }
+});
+
+// ✅ Affichage de messages prédéfinis
 function showMessage(type) {
   let body = document.getElementById("chatbot-body");
   let msg = "";
 
-  if(type === "services") {
+  if (type === "services") {
     msg = "✅ <b>Maluvpro</b> : Solutions de fermetures à Paris et ses alentours. Service de qualité garanti.";
-  } else if(type === "horaires") {
+  } else if (type === "horaires") {
     msg = "⏰ Nos horaires : Ouvert de <b>8h à 18h</b>, du lundi au samedi.";
-  } else if(type === "contact") {
+  } else if (type === "contact") {
     msg = "📞 Contactez-nous au <b>+33 6 61 16 97 99</b><br>" +
           "📍 <a href='https://maps.app.goo.gl/kEhYNWQFYJJhsfYY9' target='_blank'>Cliquez ici pour nous trouver sur Google Maps</a>";
   }
@@ -251,9 +293,10 @@ function showMessage(type) {
   body.scrollTop = body.scrollHeight;
 }
 
+// ✅ Envoi de message utilisateur
 function sendMessage() {
   let input = document.getElementById("userInput");
-  if(input.value.trim() !== "") {
+  if (input.value.trim() !== "") {
     let body = document.getElementById("chatbot-body");
 
     // Message utilisateur
@@ -276,45 +319,25 @@ function sendMessage() {
   }
 }
 
+// ✅ Envoi avec la touche "Entrée"
 function handleKey(e) {
-  if(e.key === "Enter") {
+  if (e.key === "Enter") {
     sendMessage();
   }
 }
 
-// Toggle chatbot
+// ✅ Toggle chatbot avec un bouton
 document.getElementById("chatbot-toggle").addEventListener("click", () => {
   let chatbot = document.getElementById("chatbot");
   chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
 });
 
-// Ouvrir automatiquement avec son et message de bienvenue
-window.addEventListener("load", function () {
-    const chatbot = document.getElementById('chatbot');
-    if (chatbot) {
-        chatbot.style.display = 'flex'; // Afficher le chatbot
-    }
-
-    // Son "tic" au démarrage
-    const audio = new Audio('https://www.soundjay.com/button/sounds/button-16.mp3'); 
-    audio.play().catch(e => console.log("Son bloqué par le navigateur", e));
-
-    // Message de bienvenue
-    const chatBody = document.getElementById('chatbot-body');
-    if (chatBody) {
-        const botMessage = document.createElement('div');
-        botMessage.classList.add('bot-message');
-        chatBody.appendChild(botMessage);
-        // Faire défiler vers le bas
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-});
-
-// Fermer avec la croix
+// ✅ Fermer avec la croix
 document.getElementById("chatbot-close").addEventListener("click", () => {
   document.getElementById("chatbot").style.display = "none";
 });
-// rendez-vous
+
+// ✅ Popup rendez-vous (ouvrir / fermer)
 const openBtn = document.getElementById('open-appointment');
 const popup = document.getElementById('appointment-popup');
 const closeBtn = document.getElementById('close-appointment');
@@ -327,10 +350,11 @@ closeBtn.addEventListener('click', () => {
   popup.classList.remove('show');
 });
 
-// Fermer en cliquant sur le fond
+// ✅ Fermer le popup en cliquant sur le fond
 popup.addEventListener('click', (e) => {
-  if(e.target === popup) popup.classList.remove('show');
+  if (e.target === popup) popup.classList.remove('show');
 });
+
 // catalogue
 const boxes = document.querySelectorAll('.icon-box');
 

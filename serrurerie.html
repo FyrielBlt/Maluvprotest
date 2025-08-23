@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Maluvpro</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+ 
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.png">
+
+
+</head>
+<style>
+  
+#mur, #vitrine {
+  scroll-margin-top: 100px;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #111;
+    }
+.tabs {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px 0 20px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #f5f5f5;
+    }
+
+    .tabs a {
+      text-decoration: none;
+      color: #333;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tabs a.active {
+      color: #d32f2f;
+      border-bottom: 2px solid #d32f2f;
+      font-weight: 600;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      background-color: #fff;
+      width: 320px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px 20px 40px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .card .number-badge {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card .red-line {
+      height: 2px;
+      width: 30px;
+      background-color: #d32f2f;
+      margin: 20px auto 0;
+    }
+
+    .btn-accessoires {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border: 1px solid #d32f2f;
+      color: #111;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-accessoires:hover {
+      background-color: #d32f2f;
+      color: white;
+    }
+
+    @media (max-width: 1000px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+    /* Hero Section */
+    .hero .text-container h2,
+.hero .text-container p {
+  color: #ffffff; /* blanc, tu peux mettre n'importe quelle couleur */
+}
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+ .hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* pleine hauteur d'écran */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Optionnel : effet de superposition sombre */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.text-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+    /* Content Section */
+    .content-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .content-section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .content-section p {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .btn-projet {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 1px solid #cc0000;
+      color: #cc0000;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-projet:hover {
+      background-color: #cc0000;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .image-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+<body class="index-page">
+
+  <header id="header" class="header ">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Maluvprobenyoussef@gmail.com</i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+33 6 61 16 97 99</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
+        </a>
+
+     <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" >Accueil</a></li>
+            <li><a href="index.html#depannage">Depannage et réparation</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#contact">Notre contact</a></li>
+
+            <li class="dropdown" ><a href="#" ><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteentréepvc.html">PVC</a></li>
+                    <li><a href="porteentréealuminium.html">Aluminium</a></li>
+                    <li><a href="porteentréeblindee.html">Blindée</a></li>
+                  </ul>
+                </li>
+               <li class="dropdown"><a href="porteautomatique.html"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
+                          <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
+                          <li><a href="porteautomatique.html#coulissantecintrées">Coulissante cintrées ou ronde</a></li>
+                          <li><a href="porteautomatique.html#coulissantetambours">Tambours</a></li>
+                          <li><a href="porteautomatique.html#coulissanteétanches">Coulissante étanches et vitrées</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="#"><span>Fenêtres</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="fenetrespvc.html">PVC</a></li>
+                          <li><a href="fenetresaluminium.html">Aluminium</a></li>
+                          <li><a href="fenetresbois.html">Bois</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="volets.html"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                   <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
+                          <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
+                          <li><a href="volets.html#battant">battants</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="facades.html"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                      <li><a href="facades.html#mur">Mur Rideaux</a></li>
+                          <li><a href="facades.html#vitrine">Vitrine</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="garage.html"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
+                          <li><a href="garage.html#enroulable">Enroulable</a></li>
+                          <li><a href="garage.html#latérale">Latérale</a></li>
+                          <li><a href="garage.html#battante">battante</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="portail.html"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
+                    <li><a href="portail.html#battant">portail battant</a></li>
+                    <li><a href="portail.html#portillion">Portillion</a></li>
+                    <li><a href="portail.html#clotures">clotures</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown"><a href="serrurerie.html"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
+                    <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+<a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+  <!-- Section Title -->
+
+
+
+ 
+
+
+  <!-- Hero Section -->
+ <section class="hero-text-typing hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/video/rideauxmetalique.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div class="text-container" data-aos="fade-up">
+    <h2 id="typed-text">Serrurerie</h2>
+    <p id="typed-subtext">Des serrures solides pour un esprit tranquille.</p>
+  </div>
+</section>
+
+<script>
+function typeWriter(elementId, text, delay = 100, callback) {
+  const element = document.getElementById(elementId);
+  element.textContent = '';
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, delay);
+    } else {
+      if (callback) callback();
+    }
+  }
+  type();
+}
+
+// Lancer l’animation sur les deux textes
+window.onload = () => {
+  typeWriter('typed-text', 'Serrurerie', 120, () => {
+    // Quand le titre est fini, on tape la phrase en dessous
+    typeWriter('typed-subtext', "Des serrures solides pour un esprit tranquille.", 50);
+  });
+};
+</script>
+  <!-- Content Section -->
+  <section class="content-section">
+  <h2>Serrurerie</h2>
+  <p>
+    Nous sommes spécialisés dans les travaux de serrurerie métallique pour les particuliers, les professionnels et les commerces. Notre savoir-faire couvre un large éventail de services de sécurisation et d’intervention rapide.
+<br>
+- Installation et dépannage de rideaux métalliques : motorisés ou manuels, pour la protection des boutiques, garages ou entrepôts.
+<br>
+- Pose de grilles métalliques : grilles extensibles ou fixes pour sécuriser vitrines, fenêtres ou entrées.
+<br>
+- Blindage de portes : renforcement de portes existantes ou installation de portes blindées pour améliorer la sécurité.
+<br>
+- Ouverture de portes : intervention rapide en cas de porte claquée, de perte de clés ou de serrure bloquée.
+<br>
+- Remplacement de serrures : tout type de serrures, y compris les modèles multipoints ou haute sécurité.
+</p>
+</section>
+<style>
+    
+</style>
+  <!-- Departments Section -->
+  </header>
+  <main class="main">
+    
+<!-- Services Section End -->
+<section id="alternating-section" style="max-width: 1200px; margin: auto; padding: 40px 20px;">
+  <div id="rideauxmétallique" class="block">
+  <div class="image">
+    <img src="assets/img/rideauxmetalique.jpg" alt="">
+  </div>
+
+  <div class="text">
+    <h3>Rideaux métalliques</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Avantages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lames pleines</td>
+          <td>Rideau totalement opaque en acier ou aluminium</td>
+          <td>Protection maximale, solidité</td>
+        </tr>
+        <tr>
+          <td>Lames micro-perforées</td>
+          <td>Petites perforations permettant un peu de visibilité</td>
+          <td>Laisse passer la lumière, visibilité partielle</td>
+        </tr>
+        <tr>
+          <td>Grille métallique (à mailles)</td>
+          <td>Structure ajourée en forme de grille</td>
+          <td>Bonne visibilité, idéale pour les vitrines</td>
+        </tr>
+        <tr>
+          <td>Motorisé</td>
+          <td>Fonctionne automatiquement avec une commande</td>
+          <td>Confort d’usage, ouverture rapide</td>
+        </tr>
+        <tr>
+          <td>Manuel</td>
+          <td>Ouverture et fermeture à la main</td>
+          <td>Moins coûteux, simple à installer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  
+<style>
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f5f5f5;
+}
+
+  #couleurs h2 {
+  font-size: 2rem;
+}
+
+.palette-couleurs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.couleur {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.couleur:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+</style>
+  <div id="grillesmétallique" class="block">
+  <div class="text">
+    <h3>Grilles métalliques</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Avantages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grille articulée (ou extensible)</td>
+          <td>Grille repliable latéralement en accordéon</td>
+          <td>Discrète, facile à ouvrir, peu encombrante</td>
+        </tr>
+        <tr>
+          <td>Grille à enroulement</td>
+          <td>Grille en lames ou tubes qui s’enroule verticalement</td>
+          <td>Gain de place, motorisable, pratique pour les commerces</td>
+        </tr>
+        <tr>
+          <td>Grille à tubes ondulés</td>
+          <td>Grille formée de tubes soudés en spirales ou croisillons</td>
+          <td>Bonne visibilité, résistance renforcée</td>
+        </tr>
+        <tr>
+          <td>Grille motorisée</td>
+          <td>Grille avec système d’ouverture automatique</td>
+          <td>Confort, sécurité renforcée, rapide à manœuvrer</td>
+        </tr>
+        <tr>
+          <td>Grille manuelle</td>
+          <td>Ouverture et fermeture à la main</td>
+          <td>Plus économique, simple à entretenir</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="image">
+    <img src="assets/img/grillesmetalliques.jpg" alt="">
+  </div>
+</div>
+
+
+</section>
+
+<style>
+    #alternating-section .image img {
+  width: auto;          /* ne force pas la largeur */
+  max-width: 100%;      /* au max la largeur du conteneur */
+  max-height: 300px;    /* limite la hauteur à 300px (tu peux ajuster) */
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;  /* garde les proportions sans déformer */
+}
+
+  #alternating-section .block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  #alternating-section .block.reverse {
+    flex-direction: row-reverse;
+  }
+
+  #alternating-section .image,
+  #alternating-section .text {
+    flex: 1;
+  }
+
+  #alternating-section .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  #alternating-section .text h3 {
+    margin-bottom: 12px;
+  }
+
+  #alternating-section .text p {
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #alternating-section .block,
+    #alternating-section .block.reverse {
+      flex-direction: column !important;
+    }
+    #alternating-section .image,
+    #alternating-section .text {
+      width: 100%;
+    }
+  }
+</style>
+
+  <section id="couleurs" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Couleurs disponibles</h2>
+      <p class="text-muted">Plusieurs autres couleurs sont disponibles.</p>
+    </div>
+
+    <!-- Palette de couleurs -->
+   <div class="palette-couleurs d-flex flex-column align-items-center gap-3">
+  <img src="assets/img/garagecouleur1.png" alt="Couleur 1" width="700">
+  <img src="assets/img/garagecouleur2.png" alt="Couleur 2" width="700">
+  <img src="assets/img/garagecouleur3.png" alt="Couleur 3" width="750">
+    <img src="assets/img/garagecouleur4.png" alt="Couleur 3" width="750">
+
+</div>
+
+
+
+    <div class="text-center mt-3">
+      <small class="text-muted">* Plusieurs autres couleurs sont disponibles.</small>
+    </div>
+  </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contactez-nous et nous serons ravis de répondre à toutes vos questions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.254444142193!2d2.3453688!3d48.8724258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f00592995d1%3A0x9da4af8b41e967aa!2sMALUVPRO%20porte%20et%20fen%C3%AAtre!5e0!3m2!1sfr!2stn!4v1754561771044!5m2!1sfr!2stn" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>22 Rue Bergère, 75009 Paris, France</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 6 61 16 97 99</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>Maluvprobenyoussef@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci ! </div>
+
+                  <button type="submit">Envoyer</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+<!-- Appointment Section Popup -->
+<!-- Popup 3D -->
+<div id="appointment-popup" class="appointment-popup">
+  <div class="appointment-content">
+    <span id="close-appointment" class="close-btn">&times;</span>
+    <h2>Prendre rendez-vous pour mesures et consultation </h2>
+    <p>Vous pouvez prendre rendez-vous pour les mesures et la consultation.</p>
+
+    <form action="forms/appointment.php" method="post" class="php-email-form">
+  <div>
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre Email" required>
+    <input type="tel" name="phone" placeholder="Votre Téléphone" required>
+    <input type="datetime-local" name="date" placeholder="Date de rendez-vous" required>
+    <textarea name="message" rows="5" placeholder="Message"></textarea>
+
+    <!-- Ces 3 éléments sont indispensables pour validate.js -->
+    <div class="loading" style="display: none;">Chargement...</div>
+    <div class="error-message" style="display: none; color: red;"></div>
+    <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé avec succès !</div>
+
+    <button type="submit">Prendre un rendez-vous</button>
+  </div>
+</form>
+
+  </div>
+</div>
+
+
+    </section><!-- /Appointment Section -->
+  </main>
+</section>
+<section class="partners-section">
+    <div class="partners-track">
+        <img src="assets/img/partenaires/Rehau-Logo.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/Kline.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/technal.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/tordjman.png" alt="Partenaire 4">
+        <!-- Répétition pour un défilement infini -->
+        <img src="assets/img/partenaires/Hormann.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/logo-Tubauto.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/Logo-profalux.webp" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.png" alt="Partenaire 4">
+
+        
+         <img src="assets/img/partenaires/logo_somfy_2.png" alt="Partenaire 1">
+        <img src="assets/img/partenaires/faac.png" alt="Partenaire 2">
+        <img src="assets/img/partenaires/logo_dea.png" alt="Partenaire 3">
+        <img src="assets/img/partenaires/record.jpg" alt="Partenaire 4">
+
+    </div>
+</section>
+
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Maluvpro</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>22 Rue Bergère, 75009</p>
+            <p>Paris, France</p>
+            <p class="mt-3"><strong>Téléphone:</strong> <span>+33 6 61 16 97 99</span></p>
+            <p><strong>Email:</strong> <span>Maluvprobenyoussef@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Lien utiles</h4>
+          <ul>
+           <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+          </ul>
+        </div>
+      
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maluvpro</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+<!-- Chatbot Maluvpro -->
+<div id="chatbot">
+  <div id="chatbot-header">
+    💬 Assistant Maluvpro
+    <span id="chatbot-close">✖</span> <!-- Croix de fermeture -->
+  </div> 
+  <div id="chatbot-body">
+    <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
+    <div class="bot-message">Choisissez une option ci-dessous :</div>
+    <div class="options">
+      <button onclick="showMessage('services')">📌 Nos Services</button>
+      <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
+      <button onclick="showMessage('contact')">📞 Contact</button>
+    </div>
+  </div>
+  <div id="chatbot-footer">
+    <input type="text" id="userInput" placeholder="Écrivez ici..." onkeypress="handleKey(event)">
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<!-- Bouton flottant pour ouvrir/fermer -->
+<div id="chatbot-toggle">💬</div> <!-- nouvelle icône -->
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('#navmenu a');
+  const sections = document.querySelectorAll('section[id]');
+  const navMenu = document.getElementById('navmenu');
+  const toggle = document.querySelector('.mobile-nav-toggle');
+
+  // ✅ Ouvrir / fermer menu mobile
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
+  // ✅ Fermer menu mobile après clic sur un lien
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    });
+  });
+
+  // ✅ Gérer le lien actif en scrollant
+  window.addEventListener('scroll', () => {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+});
+</script>
+
+</body>
+
+</html>
