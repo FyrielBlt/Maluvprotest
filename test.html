@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fenêtres Aluminium - Maluvpro</title>
+  <meta name="description" content="Découvrez les fenêtres en aluminium Maluvpro : design moderne, solidité, isolation thermique et large choix de couleurs. Le choix durable pour votre habitat.">
+  <meta name="keywords" content="fenêtres aluminium, menuiserie aluminium, Maluvpro, fenêtres modernes, isolation thermique, fenêtres sur mesure, Paris, installation fenêtres">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Cartes */
+.custom-card {
+  width: 300px;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.custom-card .card-img-top {
+  height: 220px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* Badge */
+.small-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Flèches personnalisées */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #E54040;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Flèches container plus étroit */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+    #design .card {
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    #design .card-img-top {
+      height: 350px;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      background-color: #fff;
+    }
+
+    #design .carousel-item .card {
+      height: 100%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #E54040;
+      border-radius: 50%;
+      padding: 15px;
+      background-size: 60% 60%;
+      background-position: center;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+
+    .small-badge {
+      width: 30px;
+      height: 30px;
+      font-size: 0.8rem;
+      padding: 6px;
+      z-index: 10;
+      top: 10px !important;
+    }
+
+    .badge {
+      z-index: 10;
+    }
+
+    .position-relative {
+      z-index: 1;
+    }
+
+    .card-img-top {
+      position: relative;
+      z-index: 0;
+    }
+
+    .card {
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .badge {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .btn-outline-danger {
+      border-color: #E54040;
+      color: #E54040;
+    }
+
+    .btn-outline-danger:hover {
+      background-color: #E54040;
+      color: #fff;
+    }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero .text-container h2,
+    .hero .text-container p {
+      color: #ffffff;
+    }
+
+    .hero {
+      background-image: url('assets/img/aluminiumcaroussel.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    .text-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #stats {
+      font-family: Arial, sans-serif;
+    }
+
+    #stats .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    #stats .sidebar {
+      width: 200px;
+      border-right: 1px solid #ddd;
+    }
+
+    #stats .sidebar ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    #stats .sidebar li {
+      margin-bottom: 15px;
+      cursor: pointer;
+      color: #888;
+      display: flex;
+      align-items: center;
+    }
+
+    #stats .sidebar li.active,
+    #stats .sidebar li:hover {
+      color: #e00;
+      font-weight: bold;
+    }
+
+    #stats .sidebar li span.num {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid #e00;
+      color: #e00;
+      text-align: center;
+      line-height: 24px;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    #stats .content {
+      flex-grow: 1;
+      padding-left: 30px;
+    }
+
+    #stats .section-number {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #e00;
+      background: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #stats .section-title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #stats .carousel {
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #stats .carousel img {
+      width: 45%;
+      border-radius: 6px;
+    }
+
+    #stats .carousel-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #stats .btn {
+      background: none;
+      border: none;
+      color: #e00;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 0 15px;
+    }
+
+    .caracteristiques-pvc {
+      background-color: #f4f6f8;
+      padding: 50px 30px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .caracteristiques-pvc h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0d3c61;
+      font-size: 28px;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    .table-caracteristiques {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .table-caracteristiques th,
+    .table-caracteristiques td {
+      padding: 14px;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table-caracteristiques thead tr {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .table-caracteristiques tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .section-reduite {
+      height: 500px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header ">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:Maluvprobenyoussef@gmail.com">Maluvprobenyoussef@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+33 6 61 16 97 99</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://www.facebook.com/votrepage" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/votrepage" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/votrepage" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <h1 class="sitename"> <img src="assets/img/logo.png" alt="Logo Maluvpro"></h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#depannage">Depannage et réparation</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#contact">Notre contact</a></li>
+
+            <li class="dropdown"><a href="#"><span>Nos produits</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Portes d'entrées</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteentréepvc.html">PVC</a></li>
+                    <li><a href="porteentréealuminium.html">Aluminium</a></li>
+                    <li><a href="porteentréeblindee.html">Blindée</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="porteautomatique.html"><span>Porte automatiques</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="porteautomatique.html#coulissantesimple">Coulissante simple ou double</a></li>
+                    <li><a href="porteautomatique.html#coulissantetélescopique">Coulissante télescopique</a></li>
+                    <li><a href="porteautomatique.html#coulissantecintrées">Coulissante cintrées ou ronde</a></li>
+                    <li><a href="porteautomatique.html#coulissantetambours">Tambours</a></li>
+                    <li><a href="porteautomatique.html#coulissanteétanches">Coulissante étanches et vitrées</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Fenêtres</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="fenetrespvc.html">PVC</a></li>
+                    <li><a href="fenetresaluminium.html">Aluminium</a></li>
+                    <li><a href="fenetresbois.html">Bois</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="volets.html"><span>Volets</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="volets.html#roulantéléctrique">Roulants éléctriques</a></li>
+                    <li><a href="volets.html#roulantmanuel">Roulant manuel</a></li>
+                    <li><a href="volets.html#battant">battants</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="facades.html"><span>Façades</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="facades.html#mur">Mur Rideaux</a></li>
+                    <li><a href="facades.html#vitrine">Vitrine</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="garage.html"><span>Porte garage</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="garage.html#sectionnelle">Sectionnelle</a></li>
+                    <li><a href="garage.html#enroulable">Enroulable</a></li>
+                    <li><a href="garage.html#latérale">Latérale</a></li>
+                    <li><a href="garage.html#battante">battante</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="portail.html"><span>Portail</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="portail.html#coulissant">Portail Coulissant</a></li>
+                    <li><a href="portail.html#battant">portail battant</a></li>
+                    <li><a href="portail.html#portillion">Portillion</a></li>
+                    <li><a href="portail.html#clotures">clotures</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="serrurerie.html"><span>Serrurerie</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="serrurerie.html#rideauxmétallique">Rideaux métallique</a></li>
+                    <li><a href="serrurerie.html#grillesmétallique">Grilles métallique</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+    <!-- Section Title -->
+    <section class="hero-text-typing hero">
+      <div class="text-container" data-aos="fade-up">
+        <h2 id="typed-text">Fenêtres Aluminium</h2>
+        <p id="typed-subtext">L'aluminium, le choix de demain</p>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments section py-5 sticky-top " style="background-color:#f4f6f8;">
+      <div class="branding d-flex align-items-center">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <nav id="navmenu" class="navmenu always-visible-menu">
+            <ul>
+              <li><a href="#about" class="active">Présentation</a></li>
+              <li><a href="#details">Détails</a></li>
+              <li><a href="#stats">Couleurs</a></li>
+              <li><a href="#design">Type d'ouverture</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4 gx-5">
+          <div class="col-lg-6 position-relative align-self-start">
+            <!-- Tableau des avantages -->
+            <table class="table table-bordered table-striped shadow-sm">
+              <thead class="table-light">
+                <tr>
+                  <th colspan="2" class="text-center">Avantages des fenêtres en aluminium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>✅ Esthétique</td>
+                  <td>Design moderne, profils fins, grandes surfaces vitrées</td>
+                </tr>
+                <tr>
+                  <td>✅ Solidité</td>
+                  <td>Matériau résistant, stable et durable dans le temps</td>
+                </tr>
+                <tr>
+                  <td>✅ Entretien facile</td>
+                  <td>Ne rouille pas, nettoyage simple à l’eau</td>
+                </tr>
+                <tr>
+                  <td>✅ Personnalisation</td>
+                  <td>Grand choix de couleurs, possibilité de bicoloration</td>
+                </tr>
+                <tr>
+                  <td>✅ Isolation</td>
+                  <td>Bonne performance thermique avec rupture de pont thermique</td>
+                </tr>
+                <tr>
+                  <td>✅ Écologique</td>
+                  <td>Aluminium 100% recyclable, fabrication française</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>Présentation Fenêtres Aluminium</h3>
+            <p>
+              Les fenêtres en aluminium sont des menuiseries fabriquées avec un cadre en alliage d’aluminium, un métal léger, résistant et durable. Elles sont largement utilisées dans les constructions modernes pour leurs nombreux avantages techniques et esthétiques.
+            </p>
+            <div class="mb-4 text-center">
+              <img src="assets/img/aluminium.png" alt="Labels de qualité pour fenêtres aluminium" class="img-fluid" style="max-height: 100px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Services Section Start -->
+    <section id="details" class="py-5 bg-light">
+  <div class="container">
+    <div id="carouselFenetres4" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-nowrap justify-content-center gap-3">
+            <!-- Carte 1 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/fenetre-aluminium-1.jpg" class="card-img-top" alt="Porte d’entrée PVC">
+<div class="card-body">
+    <h5 class="card-title">Un maximum de lumière naturelle</h5>
+    <p class="card-text">Jusqu’à 15 % de surface vitrée en plus comparé à une fenêtre traditionnelle à ouvrant apparent.</p>
+  </div>
+                <div class="small-badge bg-white text-danger border">1</div>
+
+              </div>
+              
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/fenetrealuminium2.png" class="card-img-top" alt="Porte-fenêtre PVC">
+<div class="card-body">
+                  <h5 class="card-title">Verrouillage optimisé</h5>
+                  <p class="card-text">Poignée extérieure à clé. Verrou bas bloquant l’ouverture des vantaux.</p>
+                </div>                <div class="small-badge bg-white text-danger border">2</div>
+              </div>
+            
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/fenetrealuminium-3.png" class="card-img-top" alt="Porte PVC pleine">
+<div class="card-body">
+                  <h5 class="card-title">Sécurité renforcée</h5>
+                  <p class="card-text">Grâce au détecteur intégré, vérifiez l’état de la fenêtre en temps réel via K-LINE Smart Home.</p>
+                </div>
+                <div class="small-badge bg-white text-danger border">3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-nowrap justify-content-center gap-3">
+            
+<div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/fenetrealuminium2.png" class="card-img-top" alt="Porte d’entrée PVC">
+<div class="card-body">
+                  <h5 class="card-title">Verrouillage optimisé</h5>
+                  <p class="card-text">Poignée extérieure à clé. Verrou bas bloquant l’ouverture des vantaux.</p>
+                </div>
+                <div class="small-badge bg-white text-danger border">1</div>
+
+              </div>
+              
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card custom-card">
+              <div class="position-relative">
+                <img src="assets/img/fenetrealuminium-3.png" class="card-img-top" alt="Porte-fenêtre PVC">
+<div class="card-body">
+                  <h5 class="card-title">Sécurité renforcée</h5>
+                  <p class="card-text">Grâce au détecteur intégré, vérifiez l’état de la fenêtre en temps réel via K-LINE Smart Home.</p>
+                </div>                <div class="small-badge bg-white text-danger border">2</div>
+              </div>
+            
+            </div>
+            <div class="card custom-card">
+              <div class="position-relative">
+ <div class="card-body">
+                  <p class="card-text"> <p></p><p></p> fenêtres et porte-fenêtres aluminium K•LINE profitent de l’élégance de ce matériau pour s’intégrer au mieux dans l’architecture et le style de votre habitat. Leur design personnalisable, avec un large choix de coloris ainsi que des paumelles visibles ou non, permet de s’adapter à toutes vos envies de décoration intérieure.
+
+Disponibles en ouverture à la française ou en oscillo-battante, ainsi qu’en soufflet ou en fixe pour les fenêtres, les menuiseries en aluminium K•LINE peuvent aussi être équipées d’un Détecteur de Verrouillage Intégré pour plus de tranquillité d’esprit !
+
+
+Précédent
+</p>
+                </div>
+                <div class="small-badge bg-white text-danger border">4</div>
+              </div>
+            
+            </div>
+        </div>
+
+      </div>
+
+      <!-- Flèches -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFenetres4" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFenetres4" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </div>
+</section>
+    <!-- Services Section End -->
+
+    <!-- Appointment Section Popup -->
+    <div id="appointment-popup" class="appointment-popup">
+      <div class="appointment-content">
+        <span id="close-appointment" class="close-btn" aria-label="Fermer">&times;</span>
+        <h2>Prendre rendez-vous pour mesures et consultation</h2>
+        <p>Vous pouvez prendre rendez-vous pour les mesures et la consultation.</p>
+
+        <form action="forms/appointment.php" method="post" class="php-email-form">
+          <div>
+            <input type="text" name="name" placeholder="Votre nom" required aria-label="Votre nom">
+            <input type="email" name="email" placeholder="Votre Email" required aria-label="Votre Email">
+            <input type="tel" name="phone" placeholder="Votre Téléphone" required aria-label="Votre Téléphone">
+            <input type="datetime-local" name="date" placeholder="Date de rendez-vous" required aria-label="Date de rendez-vous">
+            <textarea name="message" rows="5" placeholder="Message" aria-label="Votre message"></textarea>
+
+            <div class="loading" style="display: none;">Chargement...</div>
+            <div class="error-message" style="display: none; color: red;"></div>
+            <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé avec succès !</div>
+
+            <button type="submit">Prendre un rendez-vous</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Stats Section (Couleurs disponibles) -->
+    <section id="stats">
+      <div class="caracteristiques-pvc">
+        <h2>Couleurs disponibles</h2>
+        <div class="table-responsive">
+          <table class="table-caracteristiques">
+            <thead>
+              <tr>
+                <th>Code RAL</th>
+                <th>Nom</th>
+                <th>Couleur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RAL 9016</td>
+                <td>Blanc signalisation</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #FFFFFF; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Blanc signalisation"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 7035</td>
+                <td>Gris clair</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #CBD0CC; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Gris clair"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 7016</td>
+                <td>Gris anthracite</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #383E42; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Gris anthracite"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 1015</td>
+                <td>Ivoire clair</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #E6D8AD; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Ivoire clair"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 7039</td>
+                <td>Gris quartz</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #A8A49D; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Gris quartz"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 8019</td>
+                <td>Brun gris</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #3E3B3C; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Brun gris"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 3004</td>
+                <td>Rouge pourpre</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #641C34; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Rouge pourpre"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 5003</td>
+                <td>Bleu saphir</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #2A3756; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Bleu saphir"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 9006</td>
+                <td>Aluminium blanc</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #A5A5A5; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Aluminium blanc"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 9007</td>
+                <td>Aluminium gris</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #8F8F8F; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Aluminium gris"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>RAL 9011</td>
+                <td>Noir graphite</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #1C1C1C; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Noir graphite"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Chêne doré</td>
+                <td>Finition bois</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #A9744F; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Chêne doré"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Champagne clair anodisé</td>
+                <td>Métallisé spécial</td>
+                <td style="display: flex; justify-content: center; align-items: center; height: 60px;">
+                  <span style="width: 50px; height: 50px; background: #D5C8B9; border: 1px solid #ccc; border-radius: 50%;" aria-label="Couleur Champagne clair anodisé"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- /Stats Section -->
+
+    <!-- Design Section (Type d'ouverture) -->
+    <section id='design' class="py-5 bg-light ">
+      <div class="container section-reduite">
+        <div id="carouselFenetres3" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row text-center">
+
+                <!-- Carte 1 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typeouverture1.png" class="card-img-top" alt="Fenêtre à la française 2 vantaux">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        1
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Fenêtre à la française 2 vantaux</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typeouverture2.png" class="card-img-top" alt="Fenêtre soufflet">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        2
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Soufflet</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typeouverture4.png" class="card-img-top" alt="Fenêtre fixe">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        3
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Fixe</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row text-center">
+
+                <!-- Carte 2 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typeouverture5.png" class="card-img-top" alt="Fenêtre oscillo-battante">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        2
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Oscillo-battante</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typefenetre6.png" class="card-img-top" alt="Fenêtre oscillo-battante en position oscillio">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        3
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Oscillo-battante position oscillio</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Carte 4 -->
+                <div class="col-md-4">
+                  <div class="card border-0 shadow-sm mb-4">
+                    <div class="position-relative">
+                      <img src="assets/img/typeouverture1.png" class="card-img-top" alt="Fenêtre à la française 2 vantaux">
+                      <div class="position-absolute start-50 translate-middle-x small-badge rounded-circle bg-white text-danger border">
+                        1
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Fenêtre à la française 2 vantaux</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flèches -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselFenetres3" data-bs-slide="prev" aria-label="Précédent">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselFenetres3" data-bs-slide="next" aria-label="Suivant">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- /Design Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contactez-nous et nous serons ravis de répondre à toutes vos questions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.254444142193!2d2.3453688!3d48.8724258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f00592995d1%3A0x9da4af8b41e967aa!2sMALUVPRO%20porte%20et%20fen%C3%AAtre!5e0!3m2!1sfr!2stn!4v1754561771044!5m2!1sfr!2stn" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation de Maluvpro sur Google Maps"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>22 Rue Bergère, 75009 Paris, France</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+33 6 61 16 97 99</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>Maluvprobenyoussef@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required aria-label="Votre nom">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre email" required aria-label="Votre email">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required aria-label="Objet du message">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required aria-label="Votre message"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci !</div>
+
+                  <button type="submit">Envoyer</button>
+                </div>
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+      <div class="partners-track">
+        <img src="assets/img/partenaires/Rehau-Logo.png" alt="Logo Partenaire Rehau">
+        <img src="assets/img/partenaires/Kline.png" alt="Logo Partenaire Kline">
+        <img src="assets/img/partenaires/technal.png" alt="Logo Partenaire Technal">
+        <img src="assets/img/partenaires/tordjman.png" alt="Logo Partenaire Tordjman">
+        <!-- Répétition pour un défilement infini -->
+        <img src="assets/img/partenaires/Hormann.png" alt="Logo Partenaire Hormann">
+        <img src="assets/img/partenaires/logo-Tubauto.png" alt="Logo Partenaire Tubauto">
+        <img src="assets/img/partenaires/Logo-profalux.webp" alt="Logo Partenaire Profalux">
+        <img src="assets/img/partenaires/record.png" alt="Logo Partenaire Record">
+        <img src="assets/img/partenaires/logo_somfy_2.png" alt="Logo Partenaire Somfy">
+        <img src="assets/img/partenaires/faac.png" alt="Logo Partenaire Faac">
+        <img src="assets/img/partenaires/logo_dea.png" alt="Logo Partenaire Dea">
+        <img src="assets/img/partenaires/record.jpg" alt="Logo Partenaire Record">
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Maluvpro</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>22 Rue Bergère, 75009</p>
+            <p>Paris, France</p>
+            <p class="mt-3"><strong>Téléphone:</strong> <span>+33 6 61 16 97 99</span></p>
+            <p><strong>Email:</strong> <span>Maluvprobenyoussef@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/votrepage" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/votrepage" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/votrepage" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Lien utiles</h4>
+          <ul>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="produits.html">Catalogue</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maluvpro</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+
+    <!-- Chatbot Maluvpro -->
+    <div id="chatbot">
+      <div id="chatbot-header">
+        💬 Assistant Maluvpro
+        <span id="chatbot-close" aria-label="Fermer le chatbot">✖</span>
+      </div>
+      <div id="chatbot-body">
+        <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
+        <div class="bot-message">Choisissez une option ci-dessous :</div>
+        <div class="options">
+          <button onclick="showMessage('about')">📌 Qui sommes nous ? </button>
+          <button onclick="showMessage('service')">📌 Services</button>
+          <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
+          <button onclick="showMessage('contact')">📞 Contact</button>
+        </div>
+      </div>
+      <div id="chatbot-footer">
+        <input type="text" id="userInput" placeholder="Écrivez ici..." onkeypress="handleKey(event)" aria-label="Saisir votre message">
+        <button onclick="sendMessage()" aria-label="Envoyer le message">➤</button>
+      </div>
+    </div>
+
+    <!-- Bouton flottant pour ouvrir/fermer -->
+    <div id="chatbot-toggle" aria-label="Ouvrir le chatbot">💬</div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Retour en haut de page"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Script pour l'effet de machine à écrire
+    function typeWriter(elementId, text, delay = 100, callback) {
+      const element = document.getElementById(elementId);
+      if (!element) return; // Ajout d'une vérification pour s'assurer que l'élément existe
+      element.textContent = '';
+      let i = 0;
+
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, delay);
+        } else {
+          if (callback) callback();
+        }
+      }
+      type();
+    }
+
+    // Lancer l’animation sur les deux textes
+    window.onload = () => {
+      typeWriter('typed-text', 'Fenêtres Aluminium', 120, () => {
+        // Quand le titre est fini, on tape la phrase en dessous
+        typeWriter('typed-subtext', "L'aluminium, le choix de demain", 50);
+      });
+    };
+
+    // Script pour la navigation sticky et l'activation des liens
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll('#navmenu a');
+      const sections = document.querySelectorAll('section[id]');
+      const navMenu = document.getElementById('navmenu');
+      const toggle = document.querySelector('.mobile-nav-toggle');
+
+      // ✅ Ouvrir / fermer menu mobile
+      if (toggle) { // Vérifier si l'élément existe
+        toggle.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+        });
+      }
+
+      // ✅ Fermer menu mobile après clic sur un lien
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navMenu.classList.contains('open')) { // Fermer seulement si le menu est ouvert
+            navMenu.classList.remove('open');
+          }
+        });
+      });
+
+      // ✅ Gérer le lien actif en scrollant
+      window.addEventListener('scroll', () => {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 100; // Ajustement pour le décalage du header
+          const sectionId = current.getAttribute('id');
+
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
