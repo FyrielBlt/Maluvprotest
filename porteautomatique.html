@@ -306,11 +306,11 @@
           <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
         </a>
 
-       <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html#hero" >Accueil</a></li>
-            <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
             <li><a href="index.html#contact">Notre contact</a></li>
 
@@ -459,17 +459,41 @@ Les portes en aluminium allient robustesse, légèreté et modernité. Elles off
 
 <nav id="navmenu" class="navmenu always-visible-menu">
   <ul>
-    <li><a href="#about" class="active">Présentation</a></li>
+   <li><a href="#about" class="active">Présentation</a></li>
     <li><a href="#couleurs">couleurs</a></li>
 <li><a href="#alternating-section">Types</a></li>
   </ul>
-  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
+<script>
+  const sections = document.querySelectorAll("section"); // Suppose que tes sections sont des <section id="...">
+  const navLinks = document.querySelectorAll("#navmenu ul li a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 
       </div>
 
     </div>
 </section>
+        
+    
   </header>
 
   <main class="main">
@@ -988,9 +1012,9 @@ Chaque porte à tambour est en quelque sorte unique. Cela s'explique car elles s
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Lien utiles</h4>
           <ul>
-            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="index.html#about">A propos</a></li>
-            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="produits.html">Catalogue</a></li>
             <li><a href="index.html#contact">contact</a></li>
           </ul>
         </div>
@@ -1005,6 +1029,7 @@ Chaque porte à tambour est en quelque sorte unique. Cela s'explique car elles s
       </div>
     </div>
 <!-- Chatbot Maluvpro -->
+<!-- Chatbot Maluvpro -->
 <div id="chatbot">
   <div id="chatbot-header">
     💬 Assistant Maluvpro
@@ -1014,7 +1039,8 @@ Chaque porte à tambour est en quelque sorte unique. Cela s'explique car elles s
     <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
     <div class="bot-message">Choisissez une option ci-dessous :</div>
     <div class="options">
-      <button onclick="showMessage('services')">📌 Nos Services</button>
+      <button onclick="showMessage('about')">📌 Qui sommes nous ? </button>
+      <button onclick="showMessage('service')">📌 Services</button>
       <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
       <button onclick="showMessage('contact')">📞 Contact</button>
     </div>
@@ -1027,6 +1053,7 @@ Chaque porte à tambour est en quelque sorte unique. Cela s'explique car elles s
 
 <!-- Bouton flottant pour ouvrir/fermer -->
 <div id="chatbot-toggle">💬</div> <!-- nouvelle icône -->
+
   </footer>
 
   <!-- Scroll Top -->

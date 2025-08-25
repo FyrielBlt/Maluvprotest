@@ -272,18 +272,42 @@ window.addEventListener("load", function () {
   }
 });
 
-// ✅ Affichage de messages prédéfinis
 function showMessage(type) {
   let body = document.getElementById("chatbot-body");
   let msg = "";
 
-  if (type === "services") {
+  if (type === "about") {
     msg = "✅ <b>Maluvpro</b> : Solutions de fermetures à Paris et ses alentours. Service de qualité garanti.";
   } else if (type === "horaires") {
     msg = "⏰ Nos horaires : Ouvert de <b>8h à 18h</b>, du lundi au samedi.";
   } else if (type === "contact") {
     msg = "📞 Contactez-nous au <b>+33 6 61 16 97 99</b><br>" +
           "📍 <a href='https://maps.app.goo.gl/kEhYNWQFYJJhsfYY9' target='_blank'>Cliquez ici pour nous trouver sur Google Maps</a>";
+  } else if (type === "service") {
+    msg = `
+      🛠️ <b>Choisissez un service :</b><br><br>
+      <button onclick="showServiceDetail('volet')" class="service-btn">🔧 Réparation de volets roulants électriques</button><br>
+      <button onclick="showServiceDetail('fenetre')" class="service-btn">🪟 Réparation de fenêtres</button><br>
+      <button onclick="showServiceDetail('serrurerie')" class="service-btn">🔐 Serrurerie</button>
+    `;
+  }
+
+  let div = document.createElement("div");
+  div.className = "bot-message";
+  div.innerHTML = msg;
+  body.appendChild(div);
+  body.scrollTop = body.scrollHeight;
+}
+function showServiceDetail(serviceType) {
+  let body = document.getElementById("chatbot-body");
+  let msg = "";
+
+  if (serviceType === "volet") {
+    msg = "🔧 <b>Réparation de volets roulants</b> : Intervention rapide sur volets bloqués, moteurs en panne, télécommandes défectueuses.";
+  } else if (serviceType === "fenetre") {
+    msg = "🪟 <b>Réparation de fenêtres</b> : Remplacement de vitrages, joints, charnières ou mécanismes cassés.";
+  } else if (serviceType === "serrurerie") {
+    msg = "🔐 <b>Serrurerie</b> : ouverture de porte, remplacement de serrures et  Changement de cylindre.";
   }
 
   let div = document.createElement("div");

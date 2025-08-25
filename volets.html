@@ -287,11 +287,11 @@
           <h1 class="sitename"> <img src="assets/img/logo.png" alt=""></h1>
         </a>
 
-       <nav id="navmenu" class="navmenu">
+     <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html#hero" >Accueil</a></li>
-            <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#depannage">Depannage et réparation</a></li>
             <li><a href="index.html#catalogue">Catalogue</a></li>
             <li><a href="index.html#contact">Notre contact</a></li>
 
@@ -360,7 +360,6 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
 <a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
 
       </div>
@@ -432,7 +431,7 @@ Les volets roulants sont la solution idéale pour allier sécurité, confort et 
 
 
   <!-- Departments Section -->
-<section id="departments" class="departments section py-5 sticky-top " style="background-color:#f4f6f8;">
+   <section id="departments" class="departments section py-5 sticky-top " style="background-color:#f4f6f8;">
 
       <div class="branding d-flex align-items-center">
 
@@ -441,17 +440,40 @@ Les volets roulants sont la solution idéale pour allier sécurité, confort et 
 
 <nav id="navmenu" class="navmenu always-visible-menu">
   <ul>
-    <li><a href="#about" class="active">Présentation</a></li>
+     <li><a href="#about" class="active">Présentation</a></li>
     <li><a href="#couleurs">couleurs</a></li>
 <li><a href="#alternating-section">Types</a></li>
   </ul>
-  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
+<script>
+  const sections = document.querySelectorAll("section"); // Suppose que tes sections sont des <section id="...">
+  const navLinks = document.querySelectorAll("#navmenu ul li a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 
       </div>
 
     </div>
 </section>
+
   </header>
 
   <main class="main">

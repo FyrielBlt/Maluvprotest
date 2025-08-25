@@ -163,6 +163,66 @@
   color: #fff;
 }
 
+/* --- Mobile Navigation Specific Styles --- */
+/* Hide navmenu by default on smaller screens */
+@media (max-width: 1200px) { /* Adjust breakpoint as needed for your design */
+    .navmenu {
+        position: fixed;
+        top: 0; /* Adjust based on your header height */
+        right: -100%; /* Start off-screen */
+        width: 70%; /* Or a fixed width */
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff; /* Background for the mobile menu */
+        padding-top: 80px; /* Space for header */
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 999; /* Ensure it's above other content */
+        display: block; /* Override d-xl-none if present */
+    }
+
+    .navmenu.navmenu-active {
+        right: 0; /* Slide in */
+    }
+
+    .navmenu ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navmenu ul li {
+        margin: 10px 0;
+    }
+
+    .navmenu ul li a {
+        padding: 10px 15px;
+        display: block;
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navmenu ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Show the toggle icon on smaller screens */
+    .mobile-nav-toggle {
+        display: block !important; /* Override d-xl-none */
+        font-size: 28px;
+        cursor: pointer;
+        color: #333; /* Adjust color as needed */
+        z-index: 1000; /* Ensure it's clickable */
+        position: relative; /* To position it correctly */
+    }
+}
+
+/* Ensure the toggle is hidden on larger screens */
+@media (min-width: 1201px) {
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+}
+
 </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -268,9 +328,10 @@
               </ul>
             </li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-<a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
+        <!-- Moved the mobile-nav-toggle here, next to the navmenu -->
+        <i class="mobile-nav-toggle bi bi-list"></i>
+        <a class="cta-btn d-none d-sm-block" id="open-appointment" href="javascript:void(0)">Rendez-vous</a>
 
       </div>
 
@@ -732,7 +793,7 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
               <div class="faq-item">
-                <h3>Combien de temps cela prend-il ?</h3>
+                <h3>Combien de temps cela prend-it ?</h3>
                 <div class="faq-content">
                   <p>Nous répondrons dans les plus brefs délais et l’installation est toujours effectuée dans les temps.</p>                </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -918,9 +979,9 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Lien utiles</h4>
           <ul>
-            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="index.html#about">A propos</a></li>
-            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="produits.html">Catalogue</a></li>
             <li><a href="index.html#contact">contact</a></li>
           </ul>
         </div>
@@ -935,6 +996,7 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
       </div>
     </div>
 <!-- Chatbot Maluvpro -->
+<!-- Chatbot Maluvpro -->
 <div id="chatbot">
   <div id="chatbot-header">
     💬 Assistant Maluvpro
@@ -944,7 +1006,8 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
     <div class="bot-message">👋 Bonjour, Assistant <b>Maluvpro</b> est à votre service.</div>
     <div class="bot-message">Choisissez une option ci-dessous :</div>
     <div class="options">
-      <button onclick="showMessage('services')">📌 Nos Services</button>
+      <button onclick="showMessage('about')">📌 Qui sommes nous ? </button>
+      <button onclick="showMessage('service')">📌 Services</button>
       <button onclick="showMessage('horaires')">⏰ Nos Horaires</button>
       <button onclick="showMessage('contact')">📞 Contact</button>
     </div>
@@ -1003,9 +1066,44 @@ Vous pouvez prendre un rendez-vous en ligne pour les mesures et la consultation.
   window.addEventListener("scroll", setActiveLink);
   window.addEventListener("load", setActiveLink);
 
+  // --- Mobile Navigation Toggle Logic ---
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navmenu = document.getElementById('navmenu');
+    const navmenuLinks = navmenu.querySelectorAll('a'); // Get all links inside the navmenu
+
+    if (mobileNavToggle && navmenu) {
+      mobileNavToggle.addEventListener('click', function() {
+        navmenu.classList.toggle('navmenu-active');
+        this.classList.toggle('bi-list');
+        this.classList.toggle('bi-x');
+      });
+
+      // Close navmenu when a link is clicked (for single-page navigation)
+      navmenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navmenu.classList.contains('navmenu-active')) {
+            navmenu.classList.remove('navmenu-active');
+            mobileNavToggle.classList.remove('bi-x');
+            mobileNavToggle.classList.add('bi-list');
+          }
+        });
+      });
+
+      // Close navmenu if window is resized to a larger screen
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 1200 && navmenu.classList.contains('navmenu-active')) {
+          navmenu.classList.remove('navmenu-active');
+          mobileNavToggle.classList.remove('bi-x');
+          mobileNavToggle.classList.add('bi-list');
+        }
+      });
+    }
+  });
 </script>
 
 
 </body>
 
 </html>
+
